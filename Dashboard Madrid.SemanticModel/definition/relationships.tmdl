@@ -88,3 +88,39 @@ relationship 0b9d3274-ec50-e116-6afb-2ecf6b9b71b4
 	fromColumn: 'Partidas Disputadas'.Competição
 	toColumn: Titulos.Títulos
 
+relationship d314a240-3c66-33d1-0f7f-91b8f4e2d1cf
+	fromColumn: 'Gols e Minutos Jogados'.Temporada
+	toColumn: Temporadas.Temporadas
+
+relationship fbff363f-c035-0869-84dc-20186c39c240
+	fromColumn: 'Posse de Bola'.Temporada
+	toColumn: Temporadas.Temporadas
+
+relationship ec84b7c5-a4cb-b620-0289-5e0c3c82a670
+	fromColumn: 'Criações Ofensivas'.Temporada
+	toColumn: Temporadas.Temporadas
+
+relationship d39a57ff-5ed6-7ddc-f171-41662248a60e
+	fromColumn: 'Estatísticas Gerais'.Temporada
+	toColumn: Temporadas.Temporadas
+
+relationship 7984a8af-d3e0-3691-fcb1-f7903c4d77e6
+	fromColumn: Passes.Temporada
+	toColumn: Temporadas.Temporadas
+
+relationship f34f76a9-da8a-d0ae-e424-24e2f34a2e82
+	fromColumn: Chutes.Temporada
+	toColumn: Temporadas.Temporadas
+
+relationship 1fbd9d7f-e006-414a-bc8c-c828596cc2c9
+	fromColumn: 'Partidas Disputadas'.Temporada
+	toColumn: Temporadas.Temporadas
+
+relationship 18d1b990-cedb-a77a-9b30-3a60e0755ce6
+	fromColumn: 'Passes Detalhados'.Temporada
+	toColumn: Temporadas.Temporadas
+
+relationship 47281bbe-3474-af27-31e9-b7a89d6c08c9
+	fromColumn: 'Ações Defensivas'.Temporada
+	toColumn: Temporadas.Temporadas
+

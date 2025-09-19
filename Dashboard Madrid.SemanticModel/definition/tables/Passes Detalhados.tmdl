@@ -120,7 +120,7 @@ table 'Passes Detalhados'
 		dataType: int64
 		formatString: 0
 		lineageTag: ac3610c4-8033-4167-9cb2-62c59dcf5501
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Temporada
 
 		annotation SummarizationSetBy = Automatic

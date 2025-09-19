@@ -210,7 +210,7 @@ table 'Posse de Bola'
 		dataType: int64
 		formatString: 0
 		lineageTag: aeaafa8e-f886-4c7f-8a11-612a7a31ff49
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Temporada
 
 		annotation SummarizationSetBy = Automatic

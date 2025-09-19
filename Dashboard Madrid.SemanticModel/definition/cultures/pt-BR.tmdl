@@ -1844,6 +1844,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "temporada": {
@@ -2732,6 +2735,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "temporada": {
@@ -3126,6 +3132,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "temporada": {
@@ -4584,6 +4593,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "temporada": {
@@ -6089,6 +6101,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "temporada": {
@@ -6488,6 +6503,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "temporada": {
@@ -7375,6 +7393,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "temporada": {
@@ -7693,6 +7714,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "temporada": {
@@ -8634,6 +8658,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "temporada": {
@@ -9167,75 +9194,41 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "partidas_disputada_data_trimestre_has_partidas_disputada_data_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "Partidas Disputadas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "partidas_disputada.data.trimestre": {
-			          "Target": {
-			            "Entity": "partidas_disputada.data.trimestre"
-			          }
-			        },
-			        "partidas_disputada.data.mê": {
-			          "Target": {
-			            "Entity": "partidas_disputada.data.mê"
-			          }
+			    },
+			    "temporada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Temporadas"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "partidas_disputada.data.trimestre"
-			            },
-			            "Object": {
-			              "Role": "partidas_disputada.data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "partidas_disputada.data.mê"
-			            },
-			            "Object": {
-			              "Role": "partidas_disputada.data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "partidas_disputada.data.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "partidas_disputada.data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres5"
+			          "temporada": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
 			        }
 			      ]
 			    },
+			    "temporada.temporada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Temporadas",
+			          "ConceptualProperty": "Temporadas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "temporada": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
 			    "partidas_disputada_data_ano_has_partidas_disputada_data_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "Partidas Disputadas"
@@ -9562,7 +9555,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê1"
+			          "ID": "trimestres_have_mê"
 			        },
 			        {
 			          "Attribute": {
@@ -9575,7 +9568,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres1"
+			          "ID": "mê_have_trimestres"
 			        },
 			        {
 			          "Preposition": {
@@ -9925,7 +9918,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê2"
+			          "ID": "trimestres_have_mê1"
 			        },
 			        {
 			          "Attribute": {
@@ -9938,7 +9931,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres2"
+			          "ID": "mê_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -10288,7 +10281,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê3"
+			          "ID": "trimestres_have_mê2"
 			        },
 			        {
 			          "Attribute": {
@@ -10301,7 +10294,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres3"
+			          "ID": "mê_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -10651,7 +10644,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê4"
+			          "ID": "trimestres_have_mê3"
 			        },
 			        {
 			          "Attribute": {
@@ -10664,7 +10657,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres4"
+			          "ID": "mê_have_trimestres3"
 			        },
 			        {
 			          "Preposition": {
@@ -11014,7 +11007,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê5"
+			          "ID": "trimestres_have_mê4"
 			        },
 			        {
 			          "Attribute": {
@@ -11027,7 +11020,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres5"
+			          "ID": "mê_have_trimestres4"
 			        },
 			        {
 			          "Preposition": {
@@ -11328,6 +11321,52 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "partidas_disputada_has_temporada": {
+			      "Binding": {
+			        "ConceptualEntity": "Partidas Disputadas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "partidas_disputada": {
+			          "Target": {
+			            "Entity": "partidas_disputada"
+			          }
+			        },
+			        "temporada": {
+			          "Target": {
+			            "Entity": "temporada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partidas_disputada"
+			            },
+			            "Object": {
+			              "Role": "temporada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "partidas_disputadas_have_temporadas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "temporada"
+			            },
+			            "Object": {
+			              "Role": "partidas_disputada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "temporadas_have_partidas_disputadas"
+			        }
+			      ]
+			    },
 			    "partidas_disputada_has_titulo": {
 			      "Binding": {
 			        "ConceptualEntity": "Partidas Disputadas"
@@ -11407,6 +11446,52 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "gols_e_minutos_jogado_has_temporada": {
+			      "Binding": {
+			        "ConceptualEntity": "Gols e Minutos Jogados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gols_e_minutos_jogado": {
+			          "Target": {
+			            "Entity": "gols_e_minutos_jogado"
+			          }
+			        },
+			        "temporada": {
+			          "Target": {
+			            "Entity": "temporada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gols_e_minutos_jogado"
+			            },
+			            "Object": {
+			              "Role": "temporada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gols_e_minutos_jogados_have_temporadas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "temporada"
+			            },
+			            "Object": {
+			              "Role": "gols_e_minutos_jogado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "temporadas_have_gols_e_minutos_jogados"
+			        }
+			      ]
+			    },
 			    "gols_e_minutos_jogado_has_base_jogadore": {
 			      "Binding": {
 			        "ConceptualEntity": "Gols e Minutos Jogados"
@@ -11450,6 +11535,52 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "base_jogadores_have_gols_e_minutos_jogados"
+			        }
+			      ]
+			    },
+			    "criações_ofensiva_has_temporada": {
+			      "Binding": {
+			        "ConceptualEntity": "Criações Ofensivas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "criações_ofensiva": {
+			          "Target": {
+			            "Entity": "criações_ofensiva"
+			          }
+			        },
+			        "temporada": {
+			          "Target": {
+			            "Entity": "temporada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "criações_ofensiva"
+			            },
+			            "Object": {
+			              "Role": "temporada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "criações_ofensivas_have_temporadas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "temporada"
+			            },
+			            "Object": {
+			              "Role": "criações_ofensiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "temporadas_have_criações_ofensivas"
 			        }
 			      ]
 			    },
@@ -11499,6 +11630,52 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "estatísticas_gerais_has_temporada": {
+			      "Binding": {
+			        "ConceptualEntity": "Estatísticas Gerais"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "estatísticas_gerais": {
+			          "Target": {
+			            "Entity": "estatísticas_gerais"
+			          }
+			        },
+			        "temporada": {
+			          "Target": {
+			            "Entity": "temporada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "estatísticas_gerais"
+			            },
+			            "Object": {
+			              "Role": "temporada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "estatísticas_geraises_have_temporadas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "temporada"
+			            },
+			            "Object": {
+			              "Role": "estatísticas_gerais"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "temporadas_have_estatísticas_geraises"
+			        }
+			      ]
+			    },
 			    "estatísticas_gerais_has_base_jogadore": {
 			      "Binding": {
 			        "ConceptualEntity": "Estatísticas Gerais"
@@ -11542,6 +11719,52 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "base_jogadores_have_estatísticas_geraises"
+			        }
+			      ]
+			    },
+			    "posse_de_bola_has_temporada": {
+			      "Binding": {
+			        "ConceptualEntity": "Posse de Bola"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "posse_de_bola": {
+			          "Target": {
+			            "Entity": "posse_de_bola"
+			          }
+			        },
+			        "temporada": {
+			          "Target": {
+			            "Entity": "temporada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "posse_de_bola"
+			            },
+			            "Object": {
+			              "Role": "temporada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "posse_de_bolas_have_temporadas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "temporada"
+			            },
+			            "Object": {
+			              "Role": "posse_de_bola"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "temporadas_have_posse_de_bolas"
 			        }
 			      ]
 			    },
@@ -11637,6 +11860,52 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "chute_has_temporada": {
+			      "Binding": {
+			        "ConceptualEntity": "Chutes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "chute": {
+			          "Target": {
+			            "Entity": "chute"
+			          }
+			        },
+			        "temporada": {
+			          "Target": {
+			            "Entity": "temporada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "chute"
+			            },
+			            "Object": {
+			              "Role": "temporada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "chutes_have_temporadas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "temporada"
+			            },
+			            "Object": {
+			              "Role": "chute"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "temporadas_have_chutes"
+			        }
+			      ]
+			    },
 			    "chute_has_base_jogadore": {
 			      "Binding": {
 			        "ConceptualEntity": "Chutes"
@@ -11729,6 +11998,52 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "passes_detalhado_has_temporada": {
+			      "Binding": {
+			        "ConceptualEntity": "Passes Detalhados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "passes_detalhado": {
+			          "Target": {
+			            "Entity": "passes_detalhado"
+			          }
+			        },
+			        "temporada": {
+			          "Target": {
+			            "Entity": "temporada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "passes_detalhado"
+			            },
+			            "Object": {
+			              "Role": "temporada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "passes_detalhados_have_temporadas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "temporada"
+			            },
+			            "Object": {
+			              "Role": "passes_detalhado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "temporadas_have_passes_detalhados"
+			        }
+			      ]
+			    },
 			    "passes_detalhado_has_base_jogadore": {
 			      "Binding": {
 			        "ConceptualEntity": "Passes Detalhados"
@@ -11772,6 +12087,52 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "base_jogadores_have_passes_detalhados"
+			        }
+			      ]
+			    },
+			    "pass_has_temporada": {
+			      "Binding": {
+			        "ConceptualEntity": "Passes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "pass": {
+			          "Target": {
+			            "Entity": "pass"
+			          }
+			        },
+			        "temporada": {
+			          "Target": {
+			            "Entity": "temporada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "pass"
+			            },
+			            "Object": {
+			              "Role": "temporada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "passes_have_temporadas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "temporada"
+			            },
+			            "Object": {
+			              "Role": "pass"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "temporadas_have_passes"
 			        }
 			      ]
 			    },
@@ -11821,6 +12182,52 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "ações_defensiva_has_temporada": {
+			      "Binding": {
+			        "ConceptualEntity": "Ações Defensivas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ações_defensiva": {
+			          "Target": {
+			            "Entity": "ações_defensiva"
+			          }
+			        },
+			        "temporada": {
+			          "Target": {
+			            "Entity": "temporada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ações_defensiva"
+			            },
+			            "Object": {
+			              "Role": "temporada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ações_defensivas_have_temporadas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "temporada"
+			            },
+			            "Object": {
+			              "Role": "ações_defensiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "temporadas_have_ações_defensivas"
+			        }
+			      ]
+			    },
 			    "ações_defensiva_has_base_jogadore": {
 			      "Binding": {
 			        "ConceptualEntity": "Ações Defensivas"
@@ -11864,6 +12271,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "base_jogadores_have_ações_defensivas"
+			        }
+			      ]
+			    },
+			    "temporada_has_temporada": {
+			      "Binding": {
+			        "ConceptualEntity": "Temporadas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "temporada": {
+			          "Target": {
+			            "Entity": "temporada"
+			          }
+			        },
+			        "temporada.temporada": {
+			          "Target": {
+			            "Entity": "temporada.temporada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "temporada"
+			            },
+			            "Object": {
+			              "Role": "temporada.temporada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "temporadas_have_temporadas"
 			        }
 			      ]
 			    },
@@ -12260,39 +12700,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "base_jogadores_have_jogadores"
-			        }
-			      ]
-			    },
-			    "partidas_disputada_has_temporada": {
-			      "Binding": {
-			        "ConceptualEntity": "Partidas Disputadas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "partidas_disputada": {
-			          "Target": {
-			            "Entity": "partidas_disputada"
-			          }
-			        },
-			        "partidas_disputada.temporada": {
-			          "Target": {
-			            "Entity": "partidas_disputada.temporada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "partidas_disputada"
-			            },
-			            "Object": {
-			              "Role": "partidas_disputada.temporada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "partidas_disputadas_have_temporadas"
 			        }
 			      ]
 			    },
@@ -12824,39 +13231,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "gols_e_minutos_jogado_has_temporada": {
-			      "Binding": {
-			        "ConceptualEntity": "Gols e Minutos Jogados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gols_e_minutos_jogado": {
-			          "Target": {
-			            "Entity": "gols_e_minutos_jogado"
-			          }
-			        },
-			        "gols_e_minutos_jogado.temporada": {
-			          "Target": {
-			            "Entity": "gols_e_minutos_jogado.temporada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gols_e_minutos_jogado"
-			            },
-			            "Object": {
-			              "Role": "gols_e_minutos_jogado.temporada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gols_e_minutos_jogados_have_temporadas"
-			        }
-			      ]
-			    },
 			    "gols_e_minutos_jogado_has_passes_progressivos_recebido": {
 			      "Binding": {
 			        "ConceptualEntity": "Gols e Minutos Jogados"
@@ -13253,39 +13627,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "criações_ofensiva_has_temporada": {
-			      "Binding": {
-			        "ConceptualEntity": "Criações Ofensivas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "criações_ofensiva": {
-			          "Target": {
-			            "Entity": "criações_ofensiva"
-			          }
-			        },
-			        "criações_ofensiva.temporada": {
-			          "Target": {
-			            "Entity": "criações_ofensiva.temporada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "criações_ofensiva"
-			            },
-			            "Object": {
-			              "Role": "criações_ofensiva.temporada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "criações_ofensivas_have_temporadas"
-			        }
-			      ]
-			    },
 			    "criações_ofensiva_has_ações_criadoras_de_gol": {
 			      "Binding": {
 			        "ConceptualEntity": "Criações Ofensivas"
@@ -13613,39 +13954,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "criações_ofensivas_have_posiçãos"
-			        }
-			      ]
-			    },
-			    "estatísticas_gerais_has_temporada": {
-			      "Binding": {
-			        "ConceptualEntity": "Estatísticas Gerais"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "estatísticas_gerais": {
-			          "Target": {
-			            "Entity": "estatísticas_gerais"
-			          }
-			        },
-			        "estatísticas_gerais.temporada": {
-			          "Target": {
-			            "Entity": "estatísticas_gerais.temporada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "estatísticas_gerais"
-			            },
-			            "Object": {
-			              "Role": "estatísticas_gerais.temporada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "estatísticas_geraises_have_temporadas"
 			        }
 			      ]
 			    },
@@ -14207,39 +14515,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "estatísticas_geraises_have_posiçãos"
-			        }
-			      ]
-			    },
-			    "posse_de_bola_has_temporada": {
-			      "Binding": {
-			        "ConceptualEntity": "Posse de Bola"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "posse_de_bola": {
-			          "Target": {
-			            "Entity": "posse_de_bola"
-			          }
-			        },
-			        "posse_de_bola.temporada": {
-			          "Target": {
-			            "Entity": "posse_de_bola.temporada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "posse_de_bola"
-			            },
-			            "Object": {
-			              "Role": "posse_de_bola.temporada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "posse_de_bolas_have_temporadas"
 			        }
 			      ]
 			    },
@@ -15530,39 +15805,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "chute_has_temporada": {
-			      "Binding": {
-			        "ConceptualEntity": "Chutes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "chute": {
-			          "Target": {
-			            "Entity": "chute"
-			          }
-			        },
-			        "chute.temporada": {
-			          "Target": {
-			            "Entity": "chute.temporada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "chute"
-			            },
-			            "Object": {
-			              "Role": "chute.temporada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "chutes_have_temporadas"
-			        }
-			      ]
-			    },
 			    "chute_has_chutes_em_pênaltis_tentado": {
 			      "Binding": {
 			        "ConceptualEntity": "Chutes"
@@ -16421,39 +16663,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "passes_detalhado_has_temporada": {
-			      "Binding": {
-			        "ConceptualEntity": "Passes Detalhados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "passes_detalhado": {
-			          "Target": {
-			            "Entity": "passes_detalhado"
-			          }
-			        },
-			        "passes_detalhado.temporada": {
-			          "Target": {
-			            "Entity": "passes_detalhado.temporada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "passes_detalhado"
-			            },
-			            "Object": {
-			              "Role": "passes_detalhado.temporada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "passes_detalhados_have_temporadas"
-			        }
-			      ]
-			    },
 			    "passes_detalhado_has_passes_interceptados_pelo_adversário": {
 			      "Binding": {
 			        "ConceptualEntity": "Passes Detalhados"
@@ -16847,39 +17056,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "passes_detalhados_have_posiçãos"
-			        }
-			      ]
-			    },
-			    "pass_has_temporada": {
-			      "Binding": {
-			        "ConceptualEntity": "Passes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "pass": {
-			          "Target": {
-			            "Entity": "pass"
-			          }
-			        },
-			        "pass.temporada": {
-			          "Target": {
-			            "Entity": "pass.temporada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "pass"
-			            },
-			            "Object": {
-			              "Role": "pass.temporada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "passes_have_temporadas"
 			        }
 			      ]
 			    },
@@ -17672,39 +17848,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "partidas_disputadas_have_gols_feitos_visual_balanço"
-			        }
-			      ]
-			    },
-			    "ações_defensiva_has_temporada": {
-			      "Binding": {
-			        "ConceptualEntity": "Ações Defensivas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ações_defensiva": {
-			          "Target": {
-			            "Entity": "ações_defensiva"
-			          }
-			        },
-			        "ações_defensiva.temporada": {
-			          "Target": {
-			            "Entity": "ações_defensiva.temporada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ações_defensiva"
-			            },
-			            "Object": {
-			              "Role": "ações_defensiva.temporada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ações_defensivas_have_temporadas"
 			        }
 			      ]
 			    },
@@ -18660,6 +18803,72 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "data_bases_are_accessed_on_date_accessed"
+			        }
+			      ]
+			    },
+			    "partidas_disputada_data_trimestre_has_partidas_disputada_data_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "Partidas Disputadas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "partidas_disputada.data.trimestre": {
+			          "Target": {
+			            "Entity": "partidas_disputada.data.trimestre"
+			          }
+			        },
+			        "partidas_disputada.data.mê": {
+			          "Target": {
+			            "Entity": "partidas_disputada.data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partidas_disputada.data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "partidas_disputada.data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê5"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partidas_disputada.data.mê"
+			            },
+			            "Object": {
+			              "Role": "partidas_disputada.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres5"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "partidas_disputada.data.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "partidas_disputada.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres5"
 			        }
 			      ]
 			    },

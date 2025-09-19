@@ -121,7 +121,7 @@ table 'Gols e Minutos Jogados'
 		dataType: int64
 		formatString: 0
 		lineageTag: 8c727939-b020-418a-bda5-dade31751d94
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Temporada
 
 		annotation SummarizationSetBy = Automatic

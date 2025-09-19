@@ -165,7 +165,7 @@ table Passes
 		dataType: int64
 		formatString: 0
 		lineageTag: 0dfda664-a9f7-4378-9093-587377a48639
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Temporada
 
 		annotation SummarizationSetBy = Automatic

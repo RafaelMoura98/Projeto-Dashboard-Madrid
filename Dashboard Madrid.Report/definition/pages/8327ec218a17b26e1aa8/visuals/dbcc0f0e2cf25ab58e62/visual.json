@@ -2,18 +2,18 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "dbcc0f0e2cf25ab58e62",
   "position": {
-    "x": 770.01574803149606,
+    "x": 696.44094488188978,
     "y": 83.653543307086608,
-    "z": 6000,
+    "z": 7000,
     "height": 276.15748031496065,
-    "width": 483.77952755905511,
-    "tabOrder": 6000
+    "width": 564.40944881889766,
+    "tabOrder": 5000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Values": {
+        "Rows": {
           "projections": [
             {
               "field": {
@@ -28,7 +28,32 @@
               },
               "queryRef": "Titulos.URL Imagem",
               "nativeQueryRef": "URL Imagem",
+              "active": true,
               "displayName": " "
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Gols Sofridos"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Partidas Disputadas.Gols Sofridos)",
+              "nativeQueryRef": "   ",
+              "displayName": "   "
             },
             {
               "field": {
@@ -62,18 +87,43 @@
             },
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Partidas Disputadas"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Gols Feitos"
                     }
                   },
-                  "Property": "Competição"
+                  "Function": 0
                 }
               },
-              "queryRef": "Partidas Disputadas.Competição",
-              "nativeQueryRef": "Competição",
+              "queryRef": "Sum(Partidas Disputadas.Gols Feitos)",
+              "nativeQueryRef": "  ",
               "displayName": "  "
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Competição"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Partidas Disputadas.Competição)",
+              "nativeQueryRef": " ",
+              "displayName": " "
             }
           ]
         }
@@ -99,15 +149,7 @@
     "objects": {
       "total": [
         {
-          "properties": {
-            "totals": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "values": [
@@ -117,6 +159,32 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verdana'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -296,7 +364,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "145.86845724981D"
+                  "Value": "99.07952694437785D"
                 }
               }
             }
@@ -310,7 +378,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "135.29133858267716D"
+                  "Value": "170.49001399928375D"
                 }
               }
             }
@@ -338,13 +406,481 @@
             "value": {
               "expr": {
                 "Literal": {
+                  "Value": "89D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Partidas Disputadas"
+                          }
+                        },
+                        "Property": "Competição"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Champions League'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Sofridos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Partidas Disputadas"
+                          }
+                        },
+                        "Property": "Competição"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Champions League'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Feitos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Partidas Disputadas"
+                          }
+                        },
+                        "Property": "Competição"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Copa del Rey'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Sofridos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Partidas Disputadas"
+                          }
+                        },
+                        "Property": "Competição"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Copa del Rey'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Feitos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Partidas Disputadas"
+                          }
+                        },
+                        "Property": "Competição"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'La Liga'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Sofridos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Partidas Disputadas"
+                          }
+                        },
+                        "Property": "Competição"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'La Liga'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Feitos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Partidas Disputadas"
+                          }
+                        },
+                        "Property": "Competição"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Super Copa da Uefa'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Sofridos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Partidas Disputadas"
+                          }
+                        },
+                        "Property": "Competição"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Super Copa da Uefa'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Feitos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Partidas Disputadas"
+                          }
+                        },
+                        "Property": "Competição"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Supercopa de España'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Sofridos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Partidas Disputadas"
+                          }
+                        },
+                        "Property": "Competição"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Supercopa de España'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Feitos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "total": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Competição"
+                    }
+                  }
+                ]
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Sofridos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "103D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "total": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Competição"
+                    }
+                  }
+                ]
+              }
+            ],
+            "metadata": "Ações Defensivas.Gols Feitos Visual Balanço"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
                   "Value": "137D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Partidas Disputadas.Competição"
+            "metadata": "Min(Partidas Disputadas.Competição)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "41.27835058353554D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Partidas Disputadas.Gols Feitos)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "43.18033211611109D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Partidas Disputadas.Gols Sofridos)"
           }
         }
       ],
@@ -362,6 +898,91 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verdana'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verdana'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }

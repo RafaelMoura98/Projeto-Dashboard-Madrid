@@ -102,7 +102,7 @@ table 'Criações Ofensivas'
 		dataType: int64
 		formatString: 0
 		lineageTag: bf7d3858-332d-42c9-befb-5c20edf47fe4
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Temporada
 
 		annotation SummarizationSetBy = Automatic

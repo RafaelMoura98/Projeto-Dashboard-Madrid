@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "082bd23c2d9617951395",
-  "displayName": "Página 2",
+  "displayName": "Estatísticas de Jogadores",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
@@ -10,5 +10,12 @@
     "type": "Default",
     "parameters": []
   },
-  "type": "Drillthrough"
+  "type": "Drillthrough",
+  "visualInteractions": [
+    {
+      "source": "3206dfaf2ee3db37b0c6",
+      "target": "8455193ff85ac11c1472",
+      "type": "NoFilter"
+    }
+  ]
 }

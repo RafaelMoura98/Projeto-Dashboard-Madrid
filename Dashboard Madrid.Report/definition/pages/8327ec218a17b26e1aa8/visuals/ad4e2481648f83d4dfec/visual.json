@@ -4,10 +4,10 @@
   "position": {
     "x": 215.81395348837211,
     "y": 455.44186046511629,
-    "z": 1500,
+    "z": 2000,
     "height": 264.93023255813955,
     "width": 412.27906976744185,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -563,52 +563,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7534cdbd43953d75c752",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Base Times"
-              }
-            },
-            "Property": "Imagem"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0e51d8163b8c21fcb645",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Partidas Disputadas"
-              }
-            },
-            "Property": "Temporada"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f09e38d02e0a552b4cfc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Ações Defensivas"
-              }
-            },
-            "Property": "Gols Sofridos Visual Balanço"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   },
   "isHidden": true
 }

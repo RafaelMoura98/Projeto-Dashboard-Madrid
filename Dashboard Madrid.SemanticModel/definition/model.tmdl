@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["DataBase","Ações Defensivas","Passes","Passes Detalhados","Gols Sofridos Detalhado","Chutes","Gols Marcados Detalhado","Posse de Bola","Estatísticas Gerais","Criações Ofensivas","Gols e Minutos Jogados","Partidas Disputadas","Base Jogadores","Base Países","Base Times","Titulos"]
+annotation PBI_QueryOrder = ["DataBase","Ações Defensivas","Passes","Passes Detalhados","Gols Sofridos Detalhado","Chutes","Gols Marcados Detalhado","Posse de Bola","Estatísticas Gerais","Criações Ofensivas","Gols e Minutos Jogados","Partidas Disputadas","Base Jogadores","Base Países","Base Times","Titulos","Temporadas"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -35,6 +35,7 @@ ref table 'Base Países'
 ref table 'Base Times'
 ref table Titulos
 ref table LocalDateTable_d852bafb-2b7b-43e8-872b-88fc811bfd27
+ref table Temporadas
 
 ref cultureInfo pt-BR
 

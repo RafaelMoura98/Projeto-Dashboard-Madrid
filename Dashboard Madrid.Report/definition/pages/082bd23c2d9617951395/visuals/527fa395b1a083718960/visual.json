@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "527fa395b1a083718960",
+  "position": {
+    "x": 275.9851301115242,
+    "y": 183.19702602230484,
+    "z": 2000,
+    "height": 103.49442379182156,
+    "width": 223.64312267657994,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ações Defensivas"
+                    }
+                  },
+                  "Property": "% Passes Curtos"
+                }
+              },
+              "queryRef": "Ações Defensivas.% Passes Curtos",
+              "nativeQueryRef": "% Passes Curtos",
+              "format": "0.00%;-0.00%;0.00%"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Ações Defensivas"
+                  }
+                },
+                "Property": "% Passes Curtos"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
