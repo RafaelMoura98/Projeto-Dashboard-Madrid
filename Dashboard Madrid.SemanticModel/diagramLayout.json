@@ -1,0 +1,230 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 1562.9504602879329
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 679.06961369217947,
+            "y": 1847.7627393353746
+          },
+          "nodeIndex": "Ações Defensivas",
+          "nodeLineageTag": "591d727b-f7d0-45d0-b730-cab1f340f198",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1100.8066762354931,
+            "y": 1526.715906747331
+          },
+          "nodeIndex": "Base Jogadores",
+          "nodeLineageTag": "78219133-4478-400c-8518-6fb7bd8a24eb",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1442.6561558104295,
+            "y": 1947.4886130515429
+          },
+          "nodeIndex": "Base Países",
+          "nodeLineageTag": "6f62b1d1-99e1-4f06-8f57-c2a99baa67a9",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1449.311134506517,
+            "y": 2200.4409422038198
+          },
+          "nodeIndex": "Base Times",
+          "nodeLineageTag": "edd0745f-d14d-4a6e-b01a-86e91ce61873",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1623.6941985744918,
+            "y": 1357.3682865725705
+          },
+          "nodeIndex": "Chutes",
+          "nodeLineageTag": "82d364cd-a560-40cd-b50d-8716b5272d6e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 792.93560071554612,
+            "y": 838.65830861432687
+          },
+          "nodeIndex": "Criações Ofensivas",
+          "nodeLineageTag": "2207dae0-8432-4cae-a40f-e1e15ae11665",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 1738.7443593634116,
+            "y": 570.67129303581623
+          },
+          "nodeIndex": "DataBase",
+          "nodeLineageTag": "99e720db-d989-4c93-8b12-7cb27fc97201",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1364.3727770369026,
+            "y": 838.57216287645269
+          },
+          "nodeIndex": "Estatísticas Gerais",
+          "nodeLineageTag": "b4a87780-a25c-442e-9c0c-dacc511b0aff",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 715.62006089329532,
+            "y": 2155.7893479885861
+          },
+          "nodeIndex": "Gols e Minutos Jogados",
+          "nodeLineageTag": "e2d87282-3943-4429-8f52-5249c2623340",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 1187.5402729130537,
+            "y": 2510.5065150148025
+          },
+          "nodeIndex": "Gols Marcados Detalhado",
+          "nodeLineageTag": "1ea44e5f-0b36-4681-b7a9-d8d7ea488ca0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1745.7446163310701,
+            "y": 2523.6787282573587
+          },
+          "nodeIndex": "Gols Sofridos Detalhado",
+          "nodeLineageTag": "614accfa-6cc3-4706-bba6-b1349d9daba2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1805.6006531517817,
+            "y": 2182.7738471703551
+          },
+          "nodeIndex": "Partidas Disputadas",
+          "nodeLineageTag": "36efe1ac-3ead-43af-a658-df5667dcee61",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1626.5764201433738,
+            "y": 1031.0536269849108
+          },
+          "nodeIndex": "Passes",
+          "nodeLineageTag": "1a7812c6-7210-4506-9a48-a007279acd64",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 636.71245314411863,
+            "y": 1527.8093658701491
+          },
+          "nodeIndex": "Passes Detalhados",
+          "nodeLineageTag": "148cad11-07b1-4d72-a704-5682e2538cb7",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 646.48313702838641,
+            "y": 1176.7678390767112
+          },
+          "nodeIndex": "Posse de Bola",
+          "nodeLineageTag": "a96c88e8-b503-452a-8ba0-819bb5c3ed9b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 1809.5114028614362,
+            "y": 1844.1877991204187
+          },
+          "nodeIndex": "Titulos",
+          "nodeLineageTag": "3f4c6c8e-7ab0-4c4d-8581-164310ddc3ae",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 6
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 70.95554390096892,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

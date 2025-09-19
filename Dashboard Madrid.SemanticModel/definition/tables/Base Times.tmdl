@@ -1,0 +1,54 @@
+table 'Base Times'
+	lineageTag: edd0745f-d14d-4a6e-b01a-86e91ce61873
+
+	column Times
+		dataType: string
+		lineageTag: 2c7420f0-41ff-4fbb-9945-9f3db2af138c
+		summarizeBy: none
+		sourceColumn: Times
+
+		annotation SummarizationSetBy = Automatic
+
+	column Imagem
+		dataType: string
+		lineageTag: e2f8a434-d6df-4e36-982d-f40aba9e7f73
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: Imagem
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nacionalidade
+		dataType: string
+		lineageTag: bd4bae58-5b10-4a2d-857c-42bdc7a9f3b8
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Nacionalidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Imagem bandeira país'
+		dataType: string
+		lineageTag: 9670440a-e58b-493e-89c5-31f127f0560e
+		summarizeBy: none
+		sourceColumn: Imagem bandeira país
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Base Times' = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Times Imagens csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Times Imagens.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Times Imagens csv",[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"CSV Importado",{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}}),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Tipo Alterado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Times", type text}, {"Imagem", type text}, {"Nacionalidade", type text}, {"Imagem bandeira país", type text}})
+				in
+				    #"Tipo Alterado1"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

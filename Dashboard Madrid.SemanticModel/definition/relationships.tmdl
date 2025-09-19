@@ -1,0 +1,90 @@
+relationship c0626929-bdce-4458-8731-01df2ffada9f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DataBase.'Date accessed'
+	toColumn: LocalDateTable_29986b97-c6aa-4a68-8a23-44dd70571a62.Date
+
+relationship 8f725c9d-9f0d-4289-b1e2-b051f55dd302
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DataBase.'Date modified'
+	toColumn: LocalDateTable_c4f84a93-889f-49ce-9dbc-07c7b71acd3f.Date
+
+relationship 9d990493-9fca-4c2e-a192-d816a1c8382c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DataBase.'Date created'
+	toColumn: LocalDateTable_671cd127-ec41-4739-810e-fa745eef7f25.Date
+
+relationship c58b6481-3c42-4d58-b478-2aa2e1435f00
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Gols Sofridos Detalhado'.Data
+	toColumn: LocalDateTable_04a4ef31-b6eb-43a5-a98f-75c8beb81b8e.Date
+
+relationship 93a774e0-c3b9-4e49-8e2d-76706060ec76
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Gols Marcados Detalhado'.Data
+	toColumn: LocalDateTable_d7fc6681-944e-4536-805f-36c2993573ae.Date
+
+relationship AutoDetected_95eafd64-cd5f-427a-a088-f17b5dd0c81c
+	fromColumn: 'Ações Defensivas'.Jogadores
+	toColumn: 'Base Jogadores'.Jogadores
+
+relationship AutoDetected_ebd3946e-ceec-4b06-b36c-be97654924fc
+	isActive: false
+	fromColumn: 'Base Jogadores'.Nacionalidade
+	toColumn: 'Base Países'.Nacionalidade
+
+relationship AutoDetected_86c6e3d7-b984-418c-9e0d-a9be7bdea26e
+	fromColumn: 'Base Times'.Nacionalidade
+	toColumn: 'Base Países'.Nacionalidade
+
+relationship fd4efa1b-d266-f692-723a-372ec15767e6
+	fromColumn: 'Gols e Minutos Jogados'.Jogador
+	toColumn: 'Base Jogadores'.Jogadores
+
+relationship a6aadbc3-27b5-ccec-a274-11fe1ff15dca
+	fromColumn: 'Partidas Disputadas'.Oponente
+	toColumn: 'Base Times'.Times
+
+relationship 71231494-abca-0a8c-17fe-bfc4fc7c5c64
+	fromColumn: 'Gols Sofridos Detalhado'.Adversário
+	toColumn: 'Base Times'.Times
+
+relationship 5487c28c-00f9-e7b5-990d-ac7573a7a912
+	fromColumn: 'Passes Detalhados'.Jogador
+	toColumn: 'Base Jogadores'.Jogadores
+
+relationship f8a0b76f-6c6b-5975-26d4-2fe2dc91b03c
+	fromColumn: 'Posse de Bola'.Jogador
+	toColumn: 'Base Jogadores'.Jogadores
+
+relationship 6cbf99ea-967d-e3df-ee79-c7b3104e4196
+	fromColumn: 'Criações Ofensivas'.Jogador
+	toColumn: 'Base Jogadores'.Jogadores
+
+relationship c828e4bd-9d70-96ef-338a-15cf921a472b
+	fromColumn: 'Estatísticas Gerais'.Jogador
+	toColumn: 'Base Jogadores'.Jogadores
+
+relationship aad27931-5b0d-4067-64d1-ed205a26f3e2
+	fromColumn: Passes.Jogador
+	toColumn: 'Base Jogadores'.Jogadores
+
+relationship 3f69076a-77b0-7013-9eb0-81e65fc991f5
+	fromColumn: 'Gols Marcados Detalhado'.Adversário
+	toColumn: 'Base Times'.Times
+
+relationship cafdbea4-6003-6df6-dae5-d41d605ba886
+	fromColumn: Chutes.Jogador
+	toColumn: 'Base Jogadores'.Jogadores
+
+relationship 8cc42504-6952-418d-b2f4-76f0ef8ac375
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Partidas Disputadas'.Data
+	toColumn: LocalDateTable_d852bafb-2b7b-43e8-872b-88fc811bfd27.Date
+
+relationship 0b9d3274-ec50-e116-6afb-2ecf6b9b71b4
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'Partidas Disputadas'.Competição
+	toColumn: Titulos.Títulos
+

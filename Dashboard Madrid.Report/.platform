@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Dashboard Madrid"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "34d9bda4-c1ed-4580-a7a1-0a10504ab81e"
+  }
+}

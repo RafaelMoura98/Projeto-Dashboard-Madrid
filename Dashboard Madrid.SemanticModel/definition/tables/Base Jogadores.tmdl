@@ -1,0 +1,55 @@
+table 'Base Jogadores'
+	lineageTag: 78219133-4478-400c-8518-6fb7bd8a24eb
+
+	column Jogadores
+		dataType: string
+		lineageTag: 088a1806-3360-4e4a-88e1-49b82e625823
+		summarizeBy: none
+		sourceColumn: Jogadores
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Imagem Principal'
+		dataType: string
+		lineageTag: a473bd80-727a-4aef-a62d-ca911876f15c
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: Imagem Principal
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Imagens Filtros'
+		dataType: string
+		lineageTag: 2a9b088b-1ba1-48f7-9e43-2d5c03fc29fc
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: Imagens Filtros
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nacionalidade
+		dataType: string
+		lineageTag: 943bfada-4894-4929-98ff-fb2440877d6c
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Nacionalidade
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Base Jogadores' = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Jogadores Imagens csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Jogadores Imagens.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Jogadores Imagens csv",[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"CSV Importado",{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}}),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Tipo Alterado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Jogadores", type text}, {"Imagem Principal", type text}, {"Imagens Filtros", type text}, {"Nacionalidade", type text}})
+				in
+				    #"Tipo Alterado1"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

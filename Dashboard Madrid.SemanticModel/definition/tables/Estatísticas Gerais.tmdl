@@ -1,0 +1,189 @@
+table 'Estatísticas Gerais'
+	lineageTag: b4a87780-a25c-442e-9c0c-dacc511b0aff
+
+	column Jogador
+		dataType: string
+		lineageTag: 1a9e3696-5fc6-4b9a-9805-a8cd2ceb99ee
+		summarizeBy: none
+		sourceColumn: Jogador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posição
+		dataType: string
+		lineageTag: ef3e87f2-6db0-4347-875a-78656818f9bf
+		summarizeBy: none
+		sourceColumn: Posição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Idade
+		dataType: int64
+		formatString: 0
+		lineageTag: 140b75c8-5530-4250-bc17-4f56c937319e
+		summarizeBy: sum
+		sourceColumn: Idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cartões Amarelos'
+		dataType: int64
+		formatString: 0
+		lineageTag: c6a96b20-9128-4bdc-bbaa-60e05d54b762
+		summarizeBy: sum
+		sourceColumn: Cartões Amarelos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cartões Vermelhos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 46fb0186-adf1-4cfe-833f-214655a80a8b
+		summarizeBy: sum
+		sourceColumn: Cartões Vermelhos
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2° Cartões Amarelos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 07888014-fb18-4447-968e-078b0dbf2d84
+		summarizeBy: sum
+		sourceColumn: 2° Cartões Amarelos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Faltas Cometidas'
+		dataType: int64
+		formatString: 0
+		lineageTag: f732bfc6-9356-4027-9f45-f6df53e4eab9
+		summarizeBy: sum
+		sourceColumn: Faltas Cometidas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Faltas Sofridas'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f0ca0a5-2475-4096-a8de-25eb25e2fa10
+		summarizeBy: sum
+		sourceColumn: Faltas Sofridas
+
+		annotation SummarizationSetBy = Automatic
+
+	column Impedimentos
+		dataType: int64
+		formatString: 0
+		lineageTag: c4264472-23d2-4c55-ab65-8909fd79cfca
+		summarizeBy: sum
+		sourceColumn: Impedimentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cruzamentos
+		dataType: int64
+		formatString: 0
+		lineageTag: 3da08213-0b41-4b0f-9a41-147fe4959c66
+		summarizeBy: sum
+		sourceColumn: Cruzamentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Interceptações
+		dataType: int64
+		formatString: 0
+		lineageTag: 6650b451-bf02-4c3c-bccd-9f5a3ff9cde7
+		summarizeBy: sum
+		sourceColumn: Interceptações
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Desarmes Ganhos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 56585420-62c8-4cce-9080-fd4304d27ccf
+		summarizeBy: sum
+		sourceColumn: Desarmes Ganhos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pênaltis Convertidos'
+		dataType: int64
+		formatString: 0
+		lineageTag: c343e6bb-4794-42db-8224-675624ea0fc4
+		summarizeBy: sum
+		sourceColumn: Pênaltis Convertidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pênaltis Cometidos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c6a362f-13df-4a44-b7d3-47fedf410cc2
+		summarizeBy: sum
+		sourceColumn: Pênaltis Cometidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gols Contras'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7636af6c-e1e2-4481-a149-64bd0f272725
+		summarizeBy: sum
+		sourceColumn: Gols Contras
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bolas Perdidas Recuperadas'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b2f2c8c-6a5c-4665-8f63-b293f581ac69
+		summarizeBy: sum
+		sourceColumn: Bolas Perdidas Recuperadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Duelos Aéreos Ganhos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 329b616e-95f5-4887-bd31-dcdca8b1066a
+		summarizeBy: sum
+		sourceColumn: Duelos Aéreos Ganhos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Duelos Aéreos Perdidos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 03d0ee00-33a2-465b-83ac-89da0d4c675d
+		summarizeBy: sum
+		sourceColumn: Duelos Aéreos Perdidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Temporada
+		dataType: int64
+		formatString: 0
+		lineageTag: a0941aa0-e73c-4b7c-8dcf-e90f5f03192c
+		summarizeBy: sum
+		sourceColumn: Temporada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Estatísticas Gerais' = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatísticas Gerais csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Estatísticas Gerais.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatísticas Gerais csv",[Delimiter=",", Columns=20, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Jogador", type text}, {"Nacionalidade", type text}, {"Posição", type text}, {"Idade", Int64.Type}, {"Cartões Amarelos", Int64.Type}, {"Cartões Vermelhos", Int64.Type}, {"2° Cartões Amarelos", Int64.Type}, {"Faltas Cometidas", Int64.Type}, {"Faltas Sofridas", Int64.Type}, {"Impedimentos", Int64.Type}, {"Cruzamentos", Int64.Type}, {"Interceptações", Int64.Type}, {"Desarmes Ganhos", Int64.Type}, {"Pênaltis Convertidos", Int64.Type}, {"Pênaltis Cometidos", Int64.Type}, {"Gols Contras", Int64.Type}, {"Bolas Perdidas Recuperadas", Int64.Type}, {"Duelos Aéreos Ganhos", Int64.Type}, {"Duelos Aéreos Perdidos", Int64.Type}, {"Temporada", Int64.Type}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Nacionalidade"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,45 @@
+table Titulos
+	lineageTag: 3f4c6c8e-7ab0-4c4d-8581-164310ddc3ae
+
+	column Temporada
+		dataType: int64
+		formatString: 0
+		lineageTag: 25d1696a-c716-41c7-913d-fa2dac2f9787
+		summarizeBy: sum
+		sourceColumn: Temporada
+
+		annotation SummarizationSetBy = Automatic
+
+	column Títulos
+		dataType: string
+		lineageTag: 48966570-0c55-4b79-a586-664573ffb042
+		summarizeBy: none
+		sourceColumn: Títulos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'URL Imagem'
+		dataType: string
+		lineageTag: cce7afc0-487d-440b-a255-a25f4e8186aa
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: URL Imagem
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Titulos = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Títulos Ganhos csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Títulos Ganhos.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Títulos Ganhos csv",[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Temporada", Int64.Type}, {"Títulos", type text}, {"URL Imagem", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

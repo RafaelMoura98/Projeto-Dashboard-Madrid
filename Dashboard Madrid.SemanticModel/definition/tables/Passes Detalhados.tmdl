@@ -1,0 +1,144 @@
+table 'Passes Detalhados'
+	lineageTag: 148cad11-07b1-4d72-a704-5682e2538cb7
+
+	column Jogador
+		dataType: string
+		lineageTag: ee81dd03-1c18-4bb3-86c2-f504c3d276da
+		summarizeBy: none
+		sourceColumn: Jogador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posição
+		dataType: string
+		lineageTag: 36339d94-ba89-4cbb-95f0-26f6fb586640
+		summarizeBy: none
+		sourceColumn: Posição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Idade
+		dataType: int64
+		formatString: 0
+		lineageTag: 33ccdeee-fccf-4fcd-98a6-a9c976d83b9a
+		summarizeBy: sum
+		sourceColumn: Idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes c/ Bola Rolando'
+		dataType: int64
+		formatString: 0
+		lineageTag: ac462c20-51c6-4f65-9dbd-2b65950ab7e8
+		summarizeBy: sum
+		sourceColumn: Passes c/ Bola Rolando
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes c/ Bola Parada'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9526c106-41c6-46c0-bccf-32db9c226044
+		summarizeBy: sum
+		sourceColumn: Passes c/ Bola Parada
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Em Faltas'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e21e728-652b-4621-b492-d2a06bb3c405
+		summarizeBy: sum
+		sourceColumn: Passes Em Faltas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes em Profundidade'
+		dataType: int64
+		formatString: 0
+		lineageTag: 10df0b5b-1dac-499e-88d2-ff8af1bc4706
+		summarizeBy: sum
+		sourceColumn: Passes em Profundidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inversões de Jogo'
+		dataType: int64
+		formatString: 0
+		lineageTag: 90f8f810-f264-4bb8-a26b-9d97ec1492c2
+		summarizeBy: sum
+		sourceColumn: Inversões de Jogo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cruzamentos
+		dataType: int64
+		formatString: 0
+		lineageTag: 4bcaad1c-bc17-47dc-b31e-b1ce29eb45d6
+		summarizeBy: sum
+		sourceColumn: Cruzamentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bolas de Lateral'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6aa008dc-a586-424e-89da-fd885ce552de
+		summarizeBy: sum
+		sourceColumn: Bolas de Lateral
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Escanteios Cobrados'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c15ab5d-f5c0-4448-811b-918e53cf6698
+		summarizeBy: sum
+		sourceColumn: Escanteios Cobrados
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Para Impedimentos'
+		dataType: int64
+		formatString: 0
+		lineageTag: ae90fd5e-fe52-4d52-a583-6d6b84f143ab
+		summarizeBy: sum
+		sourceColumn: Passes Para Impedimentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Interceptados pelo Adversário'
+		dataType: int64
+		formatString: 0
+		lineageTag: bf60d769-f16c-4cfb-a0b7-e85b220b4da2
+		summarizeBy: sum
+		sourceColumn: Passes Interceptados pelo Adversário
+
+		annotation SummarizationSetBy = Automatic
+
+	column Temporada
+		dataType: int64
+		formatString: 0
+		lineageTag: ac3610c4-8033-4167-9cb2-62c59dcf5501
+		summarizeBy: sum
+		sourceColumn: Temporada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Passes Detalhados' = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Tipos de Passes csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Tipos de Passes.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Tipos de Passes csv",[Delimiter=",", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Jogador", type text}, {"Nacionalidade", type text}, {"Posição", type text}, {"Idade", Int64.Type}, {"Passes c/ Bola Rolando", Int64.Type}, {"Passes c/ Bola Parada", Int64.Type}, {"Passes Em Faltas", Int64.Type}, {"Passes em Profundidade", Int64.Type}, {"Inversões de Jogo", Int64.Type}, {"Cruzamentos", Int64.Type}, {"Bolas de Lateral", Int64.Type}, {"Escanteios Cobrados", Int64.Type}, {"Passes Para Impedimentos", Int64.Type}, {"Passes Interceptados pelo Adversário", Int64.Type}, {"Temporada", Int64.Type}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Nacionalidade"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

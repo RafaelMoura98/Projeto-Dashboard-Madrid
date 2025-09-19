@@ -1,0 +1,81 @@
+table DataBase
+	lineageTag: 99e720db-d989-4c93-8b12-7cb27fc97201
+
+	column Name
+		dataType: string
+		lineageTag: 3f357e82-a203-46b5-84ae-061b82feb7ba
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Extension
+		dataType: string
+		lineageTag: ad41274b-9cc8-4a39-8877-40cb3c79e40c
+		summarizeBy: none
+		sourceColumn: Extension
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date accessed'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: df0e33c2-ed6b-4897-b559-1889476ab1b2
+		summarizeBy: none
+		sourceColumn: Date accessed
+
+		variation Variation
+			isDefault
+			relationship: c0626929-bdce-4458-8731-01df2ffada9f
+			defaultHierarchy: LocalDateTable_29986b97-c6aa-4a68-8a23-44dd70571a62.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date modified'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 34d0a4f9-d78d-4edf-8968-7268bdf57a28
+		summarizeBy: none
+		sourceColumn: Date modified
+
+		variation Variation
+			isDefault
+			relationship: 8f725c9d-9f0d-4289-b1e2-b051f55dd302
+			defaultHierarchy: LocalDateTable_c4f84a93-889f-49ce-9dbc-07c7b71acd3f.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date created'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e6128aa5-5d14-4ee9-8c6b-71dff60f7c6f
+		summarizeBy: none
+		sourceColumn: Date created
+
+		variation Variation
+			isDefault
+			relationship: 9d990493-9fca-4c2e-a192-d816a1c8382c
+			defaultHierarchy: LocalDateTable_671cd127-ec41-4739-810e-fa745eef7f25.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Folder Path'
+		dataType: string
+		lineageTag: d2458209-71a7-4986-b6b3-dff985f5e6f5
+		summarizeBy: none
+		sourceColumn: Folder Path
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DataBase = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase")
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

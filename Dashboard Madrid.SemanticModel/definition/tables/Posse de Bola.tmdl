@@ -1,0 +1,234 @@
+table 'Posse de Bola'
+	lineageTag: a96c88e8-b503-452a-8ba0-819bb5c3ed9b
+
+	column Jogador
+		dataType: string
+		lineageTag: 784cf1e3-caf1-4068-bfcd-78572db62775
+		summarizeBy: none
+		sourceColumn: Jogador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posição
+		dataType: string
+		lineageTag: 52e12db8-ff24-412d-91eb-7e78d2f9e0b4
+		summarizeBy: none
+		sourceColumn: Posição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Idade
+		dataType: int64
+		formatString: 0
+		lineageTag: 55d7dbab-fd38-4dd0-88ca-8ccf203323d6
+		summarizeBy: sum
+		sourceColumn: Idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N° Toques na Bola'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a9a0716-a94e-4f0b-9054-3e5cdf8b0e9d
+		summarizeBy: sum
+		sourceColumn: N° Toques na Bola
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N° Toques na Grande Área Defensiva'
+		dataType: int64
+		formatString: 0
+		lineageTag: 390828f4-b6f9-405d-bbe2-b32c66a82902
+		summarizeBy: sum
+		sourceColumn: N° Toques na Grande Área Defensiva
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N° Toques no Terço Defensivo'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d76b3a9-5887-4d2c-b42f-2680f0741a68
+		summarizeBy: sum
+		sourceColumn: N° Toques no Terço Defensivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N° Toques na Área Central'
+		dataType: int64
+		formatString: 0
+		lineageTag: fa2c0724-9346-4e7c-9ef8-af961739b53f
+		summarizeBy: sum
+		sourceColumn: N° Toques na Área Central
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N° Toques no Terço Ofensivo'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ff0c69d-98be-4eea-8224-408de45771d1
+		summarizeBy: sum
+		sourceColumn: N° Toques no Terço Ofensivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N° Toques na Grande Área Ofensiva'
+		dataType: int64
+		formatString: 0
+		lineageTag: 98162a1b-0990-4c35-9cf1-12a93a0df45a
+		summarizeBy: sum
+		sourceColumn: N° Toques na Grande Área Ofensiva
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Toques com Bola rolando'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2edd436e-60c7-4365-a046-53b431a6acdd
+		summarizeBy: sum
+		sourceColumn: Toques com Bola rolando
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tentativas de Dribles'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3281183d-f424-4ab8-a895-78680ab89be4
+		summarizeBy: sum
+		sourceColumn: Tentativas de Dribles
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dribles Certos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 18c4054a-b4b8-470d-a4bd-00598befc2d5
+		summarizeBy: sum
+		sourceColumn: Dribles Certos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Derrubado Por Defensor Durante Ataque'
+		dataType: int64
+		formatString: 0
+		lineageTag: 08842fdb-11c0-450e-b04e-d5fcfcc8528c
+		summarizeBy: sum
+		sourceColumn: Derrubado Por Defensor Durante Ataque
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N° de Conduções com os pés'
+		dataType: int64
+		formatString: 0
+		lineageTag: b4df70b3-8ad4-4eeb-b008-c168e3746413
+		summarizeBy: sum
+		sourceColumn: N° de Conduções com os pés
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distância Total Conduzida'
+		dataType: int64
+		formatString: 0
+		lineageTag: fa3f9792-19a7-4d00-b4cf-844a41169ce6
+		summarizeBy: sum
+		sourceColumn: Distância Total Conduzida
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distância Total Conduzida em Direção ao Gol'
+		dataType: int64
+		formatString: 0
+		lineageTag: ad93af0e-eb3e-4ef7-8293-d02410ee93e4
+		summarizeBy: sum
+		sourceColumn: Distância Total Conduzida em Direção ao Gol
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conduções Progressivas'
+		dataType: int64
+		formatString: 0
+		lineageTag: 413cceb8-6528-42e4-8690-fdd9d2d71e4f
+		summarizeBy: sum
+		sourceColumn: Conduções Progressivas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conduções no Último Terço'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e8ecdd0-04b4-47cc-b0e0-4a28b7fe4fd7
+		summarizeBy: sum
+		sourceColumn: Conduções no Último Terço
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conduções na Grande Área'
+		dataType: int64
+		formatString: 0
+		lineageTag: 38e9ce2f-1db4-4711-a355-145834a9c420
+		summarizeBy: sum
+		sourceColumn: Conduções na Grande Área
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Perdas no Controle de Bola'
+		dataType: int64
+		formatString: 0
+		lineageTag: 074bce78-1cf5-4255-a135-d11ae5cf0a85
+		summarizeBy: sum
+		sourceColumn: Perdas no Controle de Bola
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Perdas por Desarme'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e95665e-a672-4f24-b888-0af68ce03e4a
+		summarizeBy: sum
+		sourceColumn: Perdas por Desarme
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Recebidos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d84c731-47cf-4baf-b83a-39af9e40dffd
+		summarizeBy: sum
+		sourceColumn: Passes Recebidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Progressivos Recebidos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c7da6ba-9d42-42b0-9783-779f63989679
+		summarizeBy: sum
+		sourceColumn: Passes Progressivos Recebidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Temporada
+		dataType: int64
+		formatString: 0
+		lineageTag: aeaafa8e-f886-4c7f-8a11-612a7a31ff49
+		summarizeBy: sum
+		sourceColumn: Temporada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Posse de Bola' = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatísticas de Posse csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Estatísticas de Posse.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatísticas de Posse csv",[Delimiter=",", Columns=25, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Jogador", type text}, {"Nacionalidade", type text}, {"Posição", type text}, {"Idade", Int64.Type}, {"N° Toques na Bola", Int64.Type}, {"N° Toques na Grande Área Defensiva", Int64.Type}, {"N° Toques no Terço Defensivo", Int64.Type}, {"N° Toques na Área Central", Int64.Type}, {"N° Toques no Terço Ofensivo", Int64.Type}, {"N° Toques na Grande Área Ofensiva", Int64.Type}, {"Toques com Bola rolando", Int64.Type}, {"Tentativas de Dribles", Int64.Type}, {"Dribles Certos", Int64.Type}, {"Derrubado Por Defensor Durante Ataque", Int64.Type}, {"N° de Conduções com os pés", Int64.Type}, {"Distância Total Conduzida", Int64.Type}, {"Distância Total Conduzida em Direção ao Gol", Int64.Type}, {"Conduções Progressivas", Int64.Type}, {"Conduções no Último Terço", Int64.Type}, {"Conduções na Grande Área", Int64.Type}, {"Perdas no Controle de Bola", Int64.Type}, {"Perdas por Desarme", Int64.Type}, {"Passes Recebidos", Int64.Type}, {"Passes Progressivos Recebidos", Int64.Type}, {"Temporada", Int64.Type}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Nacionalidade"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

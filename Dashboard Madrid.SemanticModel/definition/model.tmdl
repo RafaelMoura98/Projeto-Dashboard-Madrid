@@ -1,0 +1,40 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DataBase","Ações Defensivas","Passes","Passes Detalhados","Gols Sofridos Detalhado","Chutes","Gols Marcados Detalhado","Posse de Bola","Estatísticas Gerais","Criações Ofensivas","Gols e Minutos Jogados","Partidas Disputadas","Base Jogadores","Base Países","Base Times","Titulos"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DataBase
+ref table DateTableTemplate_091d6ed0-c620-4cbc-8b4a-1e33f9bee050
+ref table LocalDateTable_29986b97-c6aa-4a68-8a23-44dd70571a62
+ref table LocalDateTable_c4f84a93-889f-49ce-9dbc-07c7b71acd3f
+ref table LocalDateTable_671cd127-ec41-4739-810e-fa745eef7f25
+ref table 'Ações Defensivas'
+ref table Passes
+ref table 'Passes Detalhados'
+ref table 'Gols Sofridos Detalhado'
+ref table LocalDateTable_04a4ef31-b6eb-43a5-a98f-75c8beb81b8e
+ref table Chutes
+ref table 'Gols Marcados Detalhado'
+ref table LocalDateTable_d7fc6681-944e-4536-805f-36c2993573ae
+ref table 'Posse de Bola'
+ref table 'Estatísticas Gerais'
+ref table 'Criações Ofensivas'
+ref table 'Gols e Minutos Jogados'
+ref table 'Partidas Disputadas'
+ref table 'Base Jogadores'
+ref table 'Base Países'
+ref table 'Base Times'
+ref table Titulos
+ref table LocalDateTable_d852bafb-2b7b-43e8-872b-88fc811bfd27
+
+ref cultureInfo pt-BR
+

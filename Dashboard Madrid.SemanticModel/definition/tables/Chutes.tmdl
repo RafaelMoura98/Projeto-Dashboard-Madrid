@@ -1,0 +1,118 @@
+table Chutes
+	lineageTag: 82d364cd-a560-40cd-b50d-8716b5272d6e
+
+	column Jogador
+		dataType: string
+		lineageTag: ae85c20f-3d20-40c4-ba30-5c343549ef29
+		summarizeBy: none
+		sourceColumn: Jogador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posição
+		dataType: string
+		lineageTag: 5d52a942-dbe5-4309-a3fd-3497ecdeb0d3
+		summarizeBy: none
+		sourceColumn: Posição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Idade
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b54cf64-dbc4-415b-a7cf-023b6b28e83f
+		summarizeBy: sum
+		sourceColumn: Idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gols
+		dataType: int64
+		formatString: 0
+		lineageTag: a7144b7c-9138-43bd-b676-a8170d7aa4b5
+		summarizeBy: sum
+		sourceColumn: Gols
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total de Chutes'
+		dataType: int64
+		formatString: 0
+		lineageTag: 37135f51-5400-4e82-9695-81d8127d7504
+		summarizeBy: sum
+		sourceColumn: Total de Chutes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chutes no Alvo'
+		dataType: int64
+		formatString: 0
+		lineageTag: 15349d1f-d4ab-40df-95ee-393210526e37
+		summarizeBy: sum
+		sourceColumn: Chutes no Alvo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distância Média dos Chutes'
+		dataType: double
+		lineageTag: 60cbfdf3-a763-4d23-9643-a4bf9dd9bee3
+		summarizeBy: sum
+		sourceColumn: Distância Média dos Chutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Chutes em Faltas'
+		dataType: int64
+		formatString: 0
+		lineageTag: 052b8a82-84c3-4eeb-8d98-c155fff0ebf2
+		summarizeBy: sum
+		sourceColumn: Chutes em Faltas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chutes em Pênaltis Convertidos'
+		dataType: int64
+		formatString: 0
+		lineageTag: e4492322-7260-4094-9bae-aa7811e3c1c3
+		summarizeBy: sum
+		sourceColumn: Chutes em Pênaltis Convertidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chutes em Pênaltis Tentados'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4bf8041e-9465-4fde-90ce-7c6ed4c2f74a
+		summarizeBy: sum
+		sourceColumn: Chutes em Pênaltis Tentados
+
+		annotation SummarizationSetBy = Automatic
+
+	column Temporada
+		dataType: int64
+		formatString: 0
+		lineageTag: 05ea983c-942b-46e4-b269-1bf0f3e87d25
+		summarizeBy: none
+		sourceColumn: Temporada
+
+		annotation SummarizationSetBy = User
+
+	partition Chutes = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatísticas de Chutes csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Estatísticas de Chutes.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatísticas de Chutes csv",[Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Jogador", type text}, {"Nacionalidade", type text}, {"Posição", type text}, {"Idade", Int64.Type}, {"Gols", Int64.Type}, {"Total de Chutes", Int64.Type}, {"Chutes no Alvo", Int64.Type}, {"Distância Média dos Chutes", type number}, {"", Int64.Type}, {"Chutes em Faltas", Int64.Type}, {"Chutes em Pênaltis Convertidos", Int64.Type}, {"Chutes em Pênaltis Tentados", Int64.Type}, {"Temporada", Int64.Type}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"", "Nacionalidade"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

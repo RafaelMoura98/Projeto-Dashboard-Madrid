@@ -1,0 +1,184 @@
+table 'Partidas Disputadas'
+	lineageTag: 36efe1ac-3ead-43af-a658-df5667dcee61
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 572e77de-1ad0-499d-91b4-912eac42db38
+		summarizeBy: none
+		sourceColumn: Data
+
+		variation Variation
+			isDefault
+			relationship: 8cc42504-6952-418d-b2f4-76f0ef8ac375
+			defaultHierarchy: LocalDateTable_d852bafb-2b7b-43e8-872b-88fc811bfd27.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Horário
+		dataType: string
+		lineageTag: db3b551a-cdb8-4b23-a424-558f2dff7f29
+		summarizeBy: none
+		sourceColumn: Horário
+
+		annotation SummarizationSetBy = Automatic
+
+	column Competição
+		dataType: string
+		lineageTag: fed4f4e1-c027-49e4-b278-a8c2dd0a368e
+		summarizeBy: none
+		sourceColumn: Competição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Partida
+		dataType: string
+		lineageTag: 8c0858b7-9e2a-4b2c-9062-47d543909212
+		summarizeBy: none
+		sourceColumn: Partida
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		dataType: string
+		lineageTag: fb8e59ba-8b69-4757-b24e-aff94fb9daa3
+		summarizeBy: none
+		sourceColumn: Dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Local
+		dataType: string
+		lineageTag: 968954ca-3a65-4f0f-b47d-dfcafe769c7e
+		summarizeBy: none
+		sourceColumn: Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resultado
+		dataType: string
+		lineageTag: 7b51d505-37e8-41ff-8db2-031bdf9e7071
+		summarizeBy: none
+		sourceColumn: Resultado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gols Feitos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 744aa8a2-95b4-4bbb-9606-bc8f6a289b9e
+		summarizeBy: sum
+		sourceColumn: Gols Feitos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gols Sofridos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 21f6114e-209d-4543-94f8-740f3e090542
+		summarizeBy: sum
+		sourceColumn: Gols Sofridos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Oponente
+		dataType: string
+		lineageTag: ba6c4e43-4e3f-4781-b45d-dc30b26f9817
+		summarizeBy: none
+		sourceColumn: Oponente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gols Esperados Real Madrid'
+		dataType: string
+		lineageTag: 53f8887c-3984-4fa0-ace9-5bf0dc09436a
+		summarizeBy: none
+		sourceColumn: Gols Esperados Real Madrid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gols Esperados Adversários'
+		dataType: string
+		lineageTag: c7c123ef-bd1c-4221-a902-332516cd92b8
+		summarizeBy: none
+		sourceColumn: Gols Esperados Adversários
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Posse de Bola Real Madrid'
+		dataType: string
+		lineageTag: 78d867b6-2ae4-452a-87ab-531e6fe3fd68
+		summarizeBy: none
+		sourceColumn: Posse de Bola Real Madrid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Público
+		dataType: int64
+		formatString: #,0
+		lineageTag: 5db37073-757d-4d81-92d8-eeebb649079f
+		summarizeBy: sum
+		sourceColumn: Público
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Capitão
+		dataType: string
+		lineageTag: 61dc8507-247c-41fc-ba52-2780c65c0257
+		summarizeBy: none
+		sourceColumn: Capitão
+
+		annotation SummarizationSetBy = Automatic
+
+	column Formação
+		dataType: string
+		lineageTag: c8737067-e876-4b7d-bbc7-1fdcb2048e27
+		summarizeBy: none
+		sourceColumn: Formação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Formação Alternativa'
+		dataType: string
+		lineageTag: d6b0f20f-2dfb-498d-b4e1-c19b340d9784
+		summarizeBy: none
+		sourceColumn: Formação Alternativa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Árbitro
+		dataType: string
+		lineageTag: f40419b6-a90e-4b37-a7c5-974e9afe2871
+		summarizeBy: none
+		sourceColumn: Árbitro
+
+		annotation SummarizationSetBy = Automatic
+
+	column Temporada
+		dataType: string
+		lineageTag: cc93b955-fe84-4621-a92a-5000adae6553
+		summarizeBy: none
+		sourceColumn: Temporada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Partidas Disputadas' = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Partidas Disputadas pelo Clube csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Partidas Disputadas pelo Clube.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Partidas Disputadas pelo Clube csv",[Delimiter=",", Columns=19, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Gols Feitos", Int64.Type}, {"Gols Sofridos", Int64.Type}, {"Data", type date}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

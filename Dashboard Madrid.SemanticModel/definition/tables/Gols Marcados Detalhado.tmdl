@@ -1,0 +1,172 @@
+table 'Gols Marcados Detalhado'
+	lineageTag: 1ea44e5f-0b36-4681-b7a9-d8d7ea488ca0
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: faa19425-1906-4f84-ba48-1e134c296a10
+		summarizeBy: none
+		sourceColumn: Data
+
+		variation Variation
+			isDefault
+			relationship: 93a774e0-c3b9-4e49-8e2d-76706060ec76
+			defaultHierarchy: LocalDateTable_d7fc6681-944e-4536-805f-36c2993573ae.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Competição
+		dataType: string
+		lineageTag: cea98ed0-7847-4d65-8d80-a84d44195313
+		summarizeBy: none
+		sourceColumn: Competição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Partida
+		dataType: string
+		lineageTag: 26727452-75d0-4f97-8ec6-6e1be360fb17
+		summarizeBy: none
+		sourceColumn: Partida
+
+		annotation SummarizationSetBy = Automatic
+
+	column Local
+		dataType: string
+		lineageTag: 5073f5cf-b848-45f9-80e8-ca4bc0a2110e
+		summarizeBy: none
+		sourceColumn: Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column Marcador
+		dataType: string
+		lineageTag: 8dcba8ca-8428-4d3b-a330-2342fe51bf9a
+		summarizeBy: none
+		sourceColumn: Marcador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Adversário
+		dataType: string
+		lineageTag: 7eb723f1-b966-4aa5-bd3f-3640579001fb
+		summarizeBy: none
+		sourceColumn: Adversário
+
+		annotation SummarizationSetBy = Automatic
+
+	column Titular
+		dataType: string
+		lineageTag: 306b4e4a-f257-4686-8fe2-2fe4ec8b33fe
+		summarizeBy: none
+		sourceColumn: Titular
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parte do Corpo'
+		dataType: string
+		lineageTag: 5370bb85-26f9-4eda-9176-52435fe352b9
+		summarizeBy: none
+		sourceColumn: Parte do Corpo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distância da Finalização'
+		dataType: int64
+		formatString: 0
+		lineageTag: f0e3c0c4-0017-444f-9b4b-2e22ed4a5dae
+		summarizeBy: sum
+		sourceColumn: Distância da Finalização
+
+		annotation SummarizationSetBy = Automatic
+
+	column Minuto
+		dataType: string
+		lineageTag: d551cdfe-3404-489f-80cc-ad465c82d687
+		summarizeBy: none
+		sourceColumn: Minuto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Placar Antes do Gol'
+		dataType: string
+		lineageTag: 358d548b-b0ec-48f0-9cad-36ee1bbdbf00
+		summarizeBy: none
+		sourceColumn: Placar Antes do Gol
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goleiro Adversário'
+		dataType: string
+		lineageTag: 9bcd281c-93d2-4893-b557-b03a47a78883
+		summarizeBy: none
+		sourceColumn: Goleiro Adversário
+
+		annotation SummarizationSetBy = Automatic
+
+	column Assistência
+		dataType: string
+		lineageTag: a18a579a-584c-4e76-80ef-e740891977f7
+		summarizeBy: none
+		sourceColumn: Assistência
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Início de Jogada p/ Gol'
+		dataType: string
+		lineageTag: a7d2accd-a43c-488b-b0f0-af838b4aff4b
+		summarizeBy: none
+		sourceColumn: Início de Jogada p/ Gol
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo
+		dataType: string
+		lineageTag: 75960029-d8b4-4fe1-938e-bab9c7a76252
+		summarizeBy: none
+		sourceColumn: Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pré-Ação de Gol'
+		dataType: string
+		lineageTag: 8d2b05c1-3b5a-44f2-9477-f50ce5d79a7b
+		summarizeBy: none
+		sourceColumn: Pré-Ação de Gol
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo_1
+		dataType: string
+		lineageTag: b0287a33-2e65-484a-b822-7ca66aa6d704
+		summarizeBy: none
+		sourceColumn: Tipo_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Observações
+		dataType: string
+		lineageTag: 88427af1-8c7f-4a86-bf9c-ea0c2608846f
+		summarizeBy: none
+		sourceColumn: Observações
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Gols Marcados Detalhado' = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatísticas de Gols do Real Madrid csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Estatísticas de Gols do Real Madrid.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatísticas de Gols do Real Madrid csv",[Delimiter=",", Columns=18, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Data", type date}, {"Competição", type text}, {"Partida", type text}, {"Local", type text}, {"Marcador", type text}, {"Adversário", type text}, {"Titular", type text}, {"Parte do Corpo", type text}, {"Distância da Finalização", Int64.Type}, {"Minuto", type text}, {"Placar Antes do Gol", type text}, {"Goleiro Adversário", type text}, {"Assistência", type text}, {"Início de Jogada p/ Gol", type text}, {"Tipo", type text}, {"Pré-Ação de Gol", type text}, {"Tipo_1", type text}, {"Observações", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

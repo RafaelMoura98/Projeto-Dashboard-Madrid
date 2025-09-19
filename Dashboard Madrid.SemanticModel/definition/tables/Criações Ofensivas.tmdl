@@ -1,0 +1,126 @@
+table 'Criações Ofensivas'
+	lineageTag: 2207dae0-8432-4cae-a40f-e1e15ae11665
+
+	column Jogador
+		dataType: string
+		lineageTag: 7d6f3729-3c18-446b-a0d8-605c7271010c
+		summarizeBy: none
+		sourceColumn: Jogador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posição
+		dataType: string
+		lineageTag: e5de0084-13cb-4f52-b6bb-5318c6a2932d
+		summarizeBy: none
+		sourceColumn: Posição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Idade
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e7d0682-ae3d-465c-ad41-edce2240d43b
+		summarizeBy: sum
+		sourceColumn: Idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ações Criadoras de Chute'
+		dataType: int64
+		formatString: 0
+		lineageTag: d281e924-fc5a-4153-ac2c-5adb3829da39
+		summarizeBy: sum
+		sourceColumn: Ações Criadoras de Chute
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes p/ Chute (Jogo Corrido)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 539c3fe7-cc3c-4ef7-a03b-87d633da4907
+		summarizeBy: sum
+		sourceColumn: Passes p/ Chute (Jogo Corrido)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes p/ Chute (Bola Parada)'
+		dataType: int64
+		formatString: 0
+		lineageTag: f1413ca9-32a8-460d-b39c-7c8345e27ef0
+		summarizeBy: sum
+		sourceColumn: Passes p/ Chute (Bola Parada)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dribles Criadores de Chute'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6bf488c8-67e4-4c78-8f85-39bbfcde7edf
+		summarizeBy: sum
+		sourceColumn: Dribles Criadores de Chute
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chutes Criadores de Novo Chute'
+		dataType: int64
+		formatString: 0
+		lineageTag: 29fb928c-f285-4337-a63c-542ff28f5814
+		summarizeBy: sum
+		sourceColumn: Chutes Criadores de Novo Chute
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Faltas Sofridas p/ Chute'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a898e44-46fb-4980-9847-5a529ff571fb
+		summarizeBy: sum
+		sourceColumn: Faltas Sofridas p/ Chute
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recuperações para Chute'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9deaadb5-825a-433b-9b78-923701e01c48
+		summarizeBy: sum
+		sourceColumn: Recuperações para Chute
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ações Criadoras de Gol'
+		dataType: int64
+		formatString: 0
+		lineageTag: 43b9d8b6-d78b-42e2-b650-15c167475cf0
+		summarizeBy: sum
+		sourceColumn: Ações Criadoras de Gol
+
+		annotation SummarizationSetBy = Automatic
+
+	column Temporada
+		dataType: int64
+		formatString: 0
+		lineageTag: bf7d3858-332d-42c9-befb-5c20edf47fe4
+		summarizeBy: sum
+		sourceColumn: Temporada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Criações Ofensivas' = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Gols e Criações csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Gols e Criações.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Gols e Criações csv",[Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Jogador", type text}, {"Nacionalidade", type text}, {"Posição", type text}, {"Idade", Int64.Type}, {"Ações Criadoras de Chute", Int64.Type}, {"Passes p/ Chute (Jogo Corrido)", Int64.Type}, {"Passes p/ Chute (Bola Parada)", Int64.Type}, {"Dribles Criadores de Chute", Int64.Type}, {"Chutes Criadores de Novo Chute", Int64.Type}, {"Faltas Sofridas p/ Chute", Int64.Type}, {"Recuperações para Chute", Int64.Type}, {"Ações Criadoras de Gol", Int64.Type}, {"Temporada", Int64.Type}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Nacionalidade"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

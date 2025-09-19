@@ -1,0 +1,274 @@
+table 'Ações Defensivas'
+	lineageTag: 591d727b-f7d0-45d0-b730-cab1f340f198
+
+	measure 'Gols Feitos Visual Balanço' = sum('Partidas Disputadas'[Gols Feitos])
+		formatString: 0
+		lineageTag: fe7355cc-4c90-496d-819c-2305e0defaa3
+
+	measure 'Gols Sofridos Visual Balanço' = ```
+			sum('Partidas Disputadas'[Gols Sofridos]) 
+			```
+		formatString: 0
+		lineageTag: bf6a5fb3-66c6-4dc3-b954-30cd1c9ef7b1
+
+	measure 'N° Vitórias' =
+			
+			CALCULATE(
+				COUNTA('Partidas Disputadas'[Resultado]),
+				'Partidas Disputadas'[Resultado] IN { "Vitória" }
+			)
+		formatString: 0
+		lineageTag: 3f2b42b0-2d4e-40c1-b6bd-aeb2c7340500
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "FilteredMeasure"
+				}
+
+		changedProperty = FormatString
+
+	measure 'N° Derrotas' =
+			
+			CALCULATE(
+				COUNTA('Partidas Disputadas'[Resultado]),
+				'Partidas Disputadas'[Resultado] IN { "Derrota" }
+			)
+		formatString: 0
+		lineageTag: e6e97a0a-31bb-4981-afc6-d34f14a462b6
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "FilteredMeasure"
+				}
+
+		changedProperty = FormatString
+
+	measure 'N° Empates' =
+			
+			CALCULATE(
+				COUNTA('Partidas Disputadas'[Resultado]),
+				'Partidas Disputadas'[Resultado] IN { "Empate" }
+			)
+		formatString: 0
+		lineageTag: c4df8bde-69db-4775-8dd9-2814277b4194
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "FilteredMeasure"
+				}
+
+		changedProperty = FormatString
+
+	measure 'Média de Contagem de Público por Público' =
+			
+			AVERAGEX(
+				KEEPFILTERS(VALUES('Partidas Disputadas'[Público])),
+				CALCULATE(COUNTA('Partidas Disputadas'[Público]))
+			)
+		lineageTag: 67274e67-d2d3-4082-9d35-9ba3c2bd6d55
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Média de Público Em Casa' =
+			Calculate(
+			AVERAGE('Partidas Disputadas'[Público]),'Partidas Disputadas'[Local] = "Casa")
+		lineageTag: 62d4cd62-57a9-44b4-824a-57aecd72bc59
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Jogadores
+		dataType: string
+		lineageTag: b9c28180-97f0-49a3-b0cd-3fb717fd79df
+		summarizeBy: none
+		sourceColumn: Jogadores
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posição
+		dataType: string
+		lineageTag: 2c041024-2500-4808-9360-9eb9d344608b
+		summarizeBy: none
+		sourceColumn: Posição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Idade
+		dataType: int64
+		formatString: 0
+		lineageTag: 81d3827d-15fd-4e2e-b35f-e86649947e76
+		summarizeBy: sum
+		sourceColumn: Idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Desarmes
+		dataType: int64
+		formatString: 0
+		lineageTag: ce117644-8800-430a-a4ce-5a1ebd43c805
+		summarizeBy: sum
+		sourceColumn: Desarmes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Desarmes que Geram Posse'
+		dataType: int64
+		formatString: 0
+		lineageTag: f5614f8e-5584-40bf-b8c1-5e23c8acb759
+		summarizeBy: sum
+		sourceColumn: Desarmes que Geram Posse
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Desarmes no Terço Defensivo'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0327a1ab-9b07-47e9-8806-dbda44c7c88d
+		summarizeBy: sum
+		sourceColumn: Desarmes no Terço Defensivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Desarmes no Terço Central'
+		dataType: int64
+		formatString: 0
+		lineageTag: ac47771c-53ae-4ebf-8662-5a2ff8c49ea8
+		summarizeBy: sum
+		sourceColumn: Desarmes no Terço Central
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Desarmes no Terço Ofensivo'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2fa35529-fc07-419b-8d1d-6b625f348c87
+		summarizeBy: sum
+		sourceColumn: Desarmes no Terço Ofensivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Desarmes de Dribladores'
+		dataType: int64
+		formatString: 0
+		lineageTag: ea2b9307-e464-4ab6-a20d-f6ec32114360
+		summarizeBy: sum
+		sourceColumn: Desarmes de Dribladores
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tentativas de Desarme de Drible'
+		dataType: int64
+		formatString: 0
+		lineageTag: 29be15aa-35ee-4e36-8cba-6b7f66c62a7d
+		summarizeBy: sum
+		sourceColumn: Tentativas de Desarme de Drible
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Desarmes Perdidos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1eecd381-9301-4f3d-b0c3-c964b0e133de
+		summarizeBy: sum
+		sourceColumn: Desarmes Perdidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bloqueios
+		dataType: int64
+		formatString: 0
+		lineageTag: c6cd4f9d-57a1-4086-92ca-5d2b48a427a5
+		summarizeBy: sum
+		sourceColumn: Bloqueios
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chutes Bloqueados'
+		dataType: int64
+		formatString: 0
+		lineageTag: 78a911fa-a744-40fc-8665-549e4e0b9fcd
+		summarizeBy: sum
+		sourceColumn: Chutes Bloqueados
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Bloqueados'
+		dataType: int64
+		formatString: 0
+		lineageTag: b9d620ca-500e-42a0-b273-902cf8c3938f
+		summarizeBy: sum
+		sourceColumn: Passes Bloqueados
+
+		annotation SummarizationSetBy = Automatic
+
+	column Interceptação
+		dataType: int64
+		formatString: 0
+		lineageTag: 556ea0b8-43c6-4aa6-936e-80de2136bd40
+		summarizeBy: sum
+		sourceColumn: Interceptação
+
+		annotation SummarizationSetBy = Automatic
+
+	column Afastamentos
+		dataType: int64
+		formatString: 0
+		lineageTag: ffd8e5bb-fb11-4574-8a47-89171e41d38c
+		summarizeBy: sum
+		sourceColumn: Afastamentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Erros que Geram Chute'
+		dataType: int64
+		formatString: 0
+		lineageTag: ca090ddd-e46e-4c82-a852-33c481918de2
+		summarizeBy: sum
+		sourceColumn: Erros que Geram Chute
+
+		annotation SummarizationSetBy = Automatic
+
+	column Temporada
+		dataType: int64
+		formatString: 0
+		lineageTag: 83c0f51a-c7a1-490c-baca-be7e9e7fa1c8
+		summarizeBy: sum
+		sourceColumn: Temporada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Ações Defensivas' = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Ações Defensivas csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Ações Defensivas.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Ações Defensivas csv",[Delimiter=",", Columns=19, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Jogadores", type text}, {"Nacionalidade", type text}, {"Posição", type text}, {"Idade", Int64.Type}, {"Desarmes", Int64.Type}, {"Desarmes que Geram Posse", Int64.Type}, {"Desarmes no Terço Defensivo", Int64.Type}, {"Desarmes no Terço Central", Int64.Type}, {"Desarmes no Terço Ofensivo", Int64.Type}, {"Desarmes de Dribladores", Int64.Type}, {"Tentativas de Desarme de Drible", Int64.Type}, {"Desarmes Perdidos", Int64.Type}, {"Bloqueios", Int64.Type}, {"Chutes Bloqueados", Int64.Type}, {"Passes Bloqueados", Int64.Type}, {"Interceptação", Int64.Type}, {"Afastamentos", Int64.Type}, {"Erros que Geram Chute", Int64.Type}, {"Temporada", Int64.Type}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Nacionalidade"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

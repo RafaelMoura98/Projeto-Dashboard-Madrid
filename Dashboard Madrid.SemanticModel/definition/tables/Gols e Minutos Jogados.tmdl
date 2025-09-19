@@ -1,0 +1,145 @@
+table 'Gols e Minutos Jogados'
+	lineageTag: e2d87282-3943-4429-8f52-5249c2623340
+
+	column Jogador
+		dataType: string
+		lineageTag: 2b1cc053-63fe-431d-a659-8df81dc251fa
+		summarizeBy: none
+		sourceColumn: Jogador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posição
+		dataType: string
+		lineageTag: a2fe520c-cb4a-4bd8-85ac-504da61b4c31
+		summarizeBy: none
+		sourceColumn: Posição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Idade
+		dataType: int64
+		formatString: 0
+		lineageTag: e6b69f3b-bb4b-4754-898c-f56b6ecd11bd
+		summarizeBy: sum
+		sourceColumn: Idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Partidas Disputadas'
+		dataType: int64
+		formatString: 0
+		lineageTag: 37523533-9440-40cd-80e5-446297e22a27
+		summarizeBy: sum
+		sourceColumn: Partidas Disputadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Jogos como Títular'
+		dataType: int64
+		formatString: 0
+		lineageTag: f29cb714-3eaa-47a6-9451-2c6755809968
+		summarizeBy: sum
+		sourceColumn: Jogos como Títular
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Minutos Jogados'
+		dataType: double
+		lineageTag: 4cddd6d3-fbbe-490e-92c4-e19ad4308718
+		summarizeBy: sum
+		sourceColumn: Minutos Jogados
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total de Gols'
+		dataType: int64
+		formatString: 0
+		lineageTag: 58ce7dba-b8d0-4bfe-bae8-1b5db8e1b2bb
+		summarizeBy: sum
+		sourceColumn: Total de Gols
+
+		annotation SummarizationSetBy = Automatic
+
+	column Assistências
+		dataType: int64
+		formatString: 0
+		lineageTag: b9bf3ed1-6c0d-4b59-b9f5-ba9b975354b8
+		summarizeBy: sum
+		sourceColumn: Assistências
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gols de Pênalti'
+		dataType: int64
+		formatString: 0
+		lineageTag: db9b0fe1-9578-4293-8259-b4d5ca1f0acd
+		summarizeBy: sum
+		sourceColumn: Gols de Pênalti
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pênalti Batidos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b2aa6c3-b0df-4143-8cd9-ff375ad576e3
+		summarizeBy: sum
+		sourceColumn: Pênalti Batidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conduções ao Gol'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e982525-3ddf-47f4-a37a-145dfb9c5de9
+		summarizeBy: sum
+		sourceColumn: Conduções ao Gol
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Progressivos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c7040c8-b434-4604-bdf9-7e25061b2d48
+		summarizeBy: sum
+		sourceColumn: Passes Progressivos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Progressivos Recebidos'
+		dataType: int64
+		formatString: 0
+		lineageTag: d8530069-746b-47b5-b729-4be05190dd5a
+		summarizeBy: sum
+		sourceColumn: Passes Progressivos Recebidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Temporada
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c727939-b020-418a-bda5-dade31751d94
+		summarizeBy: sum
+		sourceColumn: Temporada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Gols e Minutos Jogados' = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Gols e Minutos Dos Jogadores csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Gols e Minutos Dos Jogadores.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Gols e Minutos Dos Jogadores csv",[Delimiter=",", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Jogador", type text}, {"Nacionalidade", type text}, {"Posição", type text}, {"Idade", Int64.Type}, {"Partidas Disputadas", Int64.Type}, {"Jogos como Títular", Int64.Type}, {"Minutos Jogados", type number}, {"Total de Gols", Int64.Type}, {"Assistências", Int64.Type}, {"Gols de Pênalti", Int64.Type}, {"Pênalti Batidos", Int64.Type}, {"Conduções ao Gol", Int64.Type}, {"Passes Progressivos", Int64.Type}, {"Passes Progressivos Recebidos", Int64.Type}, {"Temporada", Int64.Type}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Nacionalidade"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

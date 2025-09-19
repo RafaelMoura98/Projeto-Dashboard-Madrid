@@ -1,0 +1,189 @@
+table Passes
+	lineageTag: 1a7812c6-7210-4506-9a48-a007279acd64
+
+	column Jogador
+		dataType: string
+		lineageTag: f1a21454-c89a-4bf5-8a15-1114186ca904
+		summarizeBy: none
+		sourceColumn: Jogador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posição
+		dataType: string
+		lineageTag: 66625bcd-665d-48a6-808e-6f1ced5e26f8
+		summarizeBy: none
+		sourceColumn: Posição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Idade
+		dataType: int64
+		formatString: 0
+		lineageTag: 1efd25a2-6523-4b6d-b218-f90cd818fd93
+		summarizeBy: sum
+		sourceColumn: Idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Certos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0061490e-ac92-4e50-8b64-ebc770994b35
+		summarizeBy: sum
+		sourceColumn: Passes Certos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Tentados'
+		dataType: int64
+		formatString: 0
+		lineageTag: caf5fc25-e84e-48de-a048-4b9e08f530d4
+		summarizeBy: sum
+		sourceColumn: Passes Tentados
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distância Total de Passes'
+		dataType: int64
+		formatString: 0
+		lineageTag: 95e5fc55-29fd-4395-ac7d-f295faa5447d
+		summarizeBy: sum
+		sourceColumn: Distância Total de Passes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distância Total de Passes Progressivos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 54fde453-1020-462c-b73a-7df3e2653e4c
+		summarizeBy: sum
+		sourceColumn: Distância Total de Passes Progressivos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Curtos Certos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9fa35b4b-92c4-4360-8570-ef720766a1c7
+		summarizeBy: sum
+		sourceColumn: Passes Curtos Certos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Curtos Tentados'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2331b4c2-f2a6-4a46-aecf-7c648cc55169
+		summarizeBy: sum
+		sourceColumn: Passes Curtos Tentados
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Médios Certos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 654e4f1c-0633-4b49-92bc-0599293dce45
+		summarizeBy: sum
+		sourceColumn: Passes Médios Certos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Médios Tentados'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f903e3a-c618-41b7-ab40-dd65115d94b5
+		summarizeBy: sum
+		sourceColumn: Passes Médios Tentados
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Longos Certos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 09862f0a-4e9b-4c4f-8027-ceedece95a83
+		summarizeBy: sum
+		sourceColumn: Passes Longos Certos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Longos Tentados'
+		dataType: int64
+		formatString: 0
+		lineageTag: e3243f79-3550-45f2-bce5-57814ee78b55
+		summarizeBy: sum
+		sourceColumn: Passes Longos Tentados
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Chaves'
+		dataType: int64
+		formatString: 0
+		lineageTag: a55972e4-075c-4bdf-b9fe-44f542df18a3
+		summarizeBy: sum
+		sourceColumn: Passes Chaves
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes ao Terço Final'
+		dataType: int64
+		formatString: 0
+		lineageTag: a5c023fb-b87d-431b-8b37-3c33637aab52
+		summarizeBy: sum
+		sourceColumn: Passes ao Terço Final
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes p/ Grande Área'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a97fbeb-ba28-4b11-9ae0-b281b7bb4b8a
+		summarizeBy: sum
+		sourceColumn: Passes p/ Grande Área
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cruzamentos p/ Grande Área'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2090979f-5c6b-436d-9361-0a508736375d
+		summarizeBy: sum
+		sourceColumn: Cruzamentos p/ Grande Área
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Passes Progressivos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4f8c4766-d4fd-4adc-b741-b8109ce31c24
+		summarizeBy: sum
+		sourceColumn: Passes Progressivos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Temporada
+		dataType: int64
+		formatString: 0
+		lineageTag: 0dfda664-a9f7-4378-9093-587377a48639
+		summarizeBy: sum
+		sourceColumn: Temporada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Passes = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase"),
+				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatisticas de Passe csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Estatisticas de Passe.csv"]}[Content],
+				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatisticas de Passe csv",[Delimiter=",", Columns=20, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Jogador", type text}, {"Nacionalidade", type text}, {"Posição", type text}, {"Idade", Int64.Type}, {"Passes Certos", Int64.Type}, {"Passes Tentados", Int64.Type}, {"Distância Total de Passes", Int64.Type}, {"Distância Total de Passes Progressivos", Int64.Type}, {"Passes Curtos Certos", Int64.Type}, {"Passes Curtos Tentados", Int64.Type}, {"Passes Médios Certos", Int64.Type}, {"Passes Médios Tentados", Int64.Type}, {"Passes Longos Certos", Int64.Type}, {"Passes Longos Tentados", Int64.Type}, {"Passes Chaves", Int64.Type}, {"Passes ao Terço Final", Int64.Type}, {"Passes p/ Grande Área", Int64.Type}, {"Cruzamentos p/ Grande Área", Int64.Type}, {"Passes Progressivos", Int64.Type}, {"Temporada", Int64.Type}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Nacionalidade"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

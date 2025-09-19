@@ -1,0 +1,770 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Gols Feitos",
+  "name": "7c2be95a4d7b3afe6826",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "ad4e2481648f83d4dfec",
+      "3b9ad5875d592adf0f25"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "8327ec218a17b26e1aa8",
+    "sections": {
+      "8327ec218a17b26e1aa8": {
+        "visualContainers": {
+          "125ce9833f5d8cb78fb8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "29ef73250e7067807f04",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Base Times"
+                        }
+                      },
+                      "Property": "Imagem"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d06c484cd14458bf2c9b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Partidas Disputadas"
+                            }
+                          },
+                          "Property": "Gols Sofridos"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "900f535e08aef65676d0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Partidas Disputadas"
+                            }
+                          },
+                          "Property": "Gols Feitos"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1fd7490938fe2cf6912b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Feitos Visual Balanço"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7a078bd214c83d716c74",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Sofridos Visual Balanço"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Partidas Disputadas"
+                            }
+                          },
+                          "Property": "Gols Feitos"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Base Times"
+                        }
+                      },
+                      "Property": "Imagem"
+                    }
+                  }
+                ]
+              },
+              "expansionStates": [
+                {
+                  "roles": [
+                    "Rows"
+                  ],
+                  "levels": [
+                    {
+                      "queryRefs": [
+                        "Base Times.Imagem"
+                      ],
+                      "identityKeys": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Base Times"
+                              }
+                            },
+                            "Property": "Imagem"
+                          }
+                        }
+                      ],
+                      "isPinned": true
+                    }
+                  ],
+                  "root": {
+                    "identityValues": null
+                  }
+                }
+              ]
+            }
+          },
+          "3b9ad5875d592adf0f25": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a2904e11f3e12419a25e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Base Times"
+                        }
+                      },
+                      "Property": "Imagem"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "344e658d0b3a6ee87b33",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Temporada"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5db80aab881d95a3a9a3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Feitos Visual Balanço"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "activeProjections": {
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Base Times"
+                        }
+                      },
+                      "Property": "Imagem"
+                    }
+                  }
+                ],
+                "Columns": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Temporada"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "80f9e8f20fe167025109": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f0f08ef5dc4a59e5c1f8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Feitos Visual Balanço"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Feitos Visual Balanço"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "df630da411110e099725": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f0c956925f01c091ad5e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Sofridos Visual Balanço"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Sofridos Visual Balanço"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "6a84509413e04e2e354b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "06cab41fd8c0cfd7aa7b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Base Times"
+                            }
+                          },
+                          "Property": "Times"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Base Times"
+                            }
+                          },
+                          "Property": "Times"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "946a2d788b676419b361": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f1b55246bb9c7231301b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Temporada"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "eda4014008f114b1a382",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Feitos Visual Balanço"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d44f7f3600788e3167a8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Sofridos Visual Balanço"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1f05adf878600c9869a4",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Partidas Disputadas"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Data"
+                            }
+                          },
+                          "Hierarchy": "Hierarquia de datas"
+                        }
+                      },
+                      "Level": "Mês"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2b0c87dd2538c36747c4",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Partidas Disputadas"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Data"
+                            }
+                          },
+                          "Hierarchy": "Hierarquia de datas"
+                        }
+                      },
+                      "Level": "Dia"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Temporada"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Temporada"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "dbcc0f0e2cf25ab58e62": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d21136d6ba77b4075d62",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Titulos"
+                        }
+                      },
+                      "Property": "URL Imagem"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "765841220273d7d46ec0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Competição"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e0ae0a40de970253521e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Feitos Visual Balanço"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5a954bd9777df875fde7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Sofridos Visual Balanço"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Feitos Visual Balanço"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "75730433cf2626020aa1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8da830bb938a6b2a5c50",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Local"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Local"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "ad4e2481648f83d4dfec": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8f2239be738d97dedeb8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Base Times"
+                        }
+                      },
+                      "Property": "Imagem"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c498178411ba437e4111",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Temporada"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9091438db1fee48ba387",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ações Defensivas"
+                        }
+                      },
+                      "Property": "Gols Sofridos Visual Balanço"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "activeProjections": {
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Base Times"
+                        }
+                      },
+                      "Property": "Imagem"
+                    }
+                  }
+                ],
+                "Columns": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Temporada"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
