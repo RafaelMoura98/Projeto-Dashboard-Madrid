@@ -80,7 +80,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Feitos Visual Balanço"
@@ -95,7 +95,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Sofridos Visual Balanço"
@@ -214,7 +214,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Feitos Visual Balanço"
@@ -268,7 +268,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Feitos Visual Balanço"
@@ -288,7 +288,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Feitos Visual Balanço"
@@ -308,7 +308,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Sofridos Visual Balanço"
@@ -328,7 +328,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Sofridos Visual Balanço"
@@ -413,7 +413,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Feitos Visual Balanço"
@@ -428,7 +428,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Sofridos Visual Balanço"
@@ -564,7 +564,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Feitos Visual Balanço"
@@ -579,7 +579,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Sofridos Visual Balanço"
@@ -599,7 +599,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Feitos Visual Balanço"
@@ -704,7 +704,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Ações Defensivas"
+                          "Entity": "Medidas"
                         }
                       },
                       "Property": "Gols Sofridos Visual Balanço"

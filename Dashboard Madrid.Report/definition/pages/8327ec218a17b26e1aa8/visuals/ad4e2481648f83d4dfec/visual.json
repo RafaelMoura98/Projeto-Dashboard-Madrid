@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "ad4e2481648f83d4dfec",
   "position": {
-    "x": 215.81395348837211,
-    "y": 455.44186046511629,
+    "x": 185,
+    "y": 385.77777777777777,
     "z": 2000,
-    "height": 264.93023255813955,
-    "width": 412.27906976744185,
-    "tabOrder": 7000
+    "height": 305.77777777777777,
+    "width": 445,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -59,7 +59,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Ações Defensivas"
+                      "Entity": "Medidas"
                     }
                   },
                   "Property": "Gols Sofridos Visual Balanço"
@@ -70,6 +70,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Base Times"
+                  }
+                },
+                "Property": "Imagem"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
@@ -133,7 +150,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "10D"
                 }
               }
             },
@@ -155,6 +172,17 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
                 }
               }
             }
@@ -201,7 +229,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "11D"
                 }
               }
             },
@@ -256,7 +284,7 @@
                         "Measure": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "Ações Defensivas"
+                              "Entity": "Medidas"
                             }
                           },
                           "Property": "Gols Sofridos Visual Balanço"
@@ -469,6 +497,17 @@
               "expr": {
                 "Literal": {
                   "Value": "'Gols Sofridos por Adversários por Temporada'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
                 }
               }
             }

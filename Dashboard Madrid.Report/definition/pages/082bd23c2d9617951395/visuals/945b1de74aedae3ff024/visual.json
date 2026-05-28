@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "945b1de74aedae3ff024",
   "position": {
-    "x": 15.464684014869889,
-    "y": 0,
+    "x": 33.259842519685037,
+    "y": 82.645669291338578,
     "z": 0,
-    "height": 719.70260223048331,
-    "width": 242.67657992565057
+    "height": 636.97637795275591,
+    "width": 242.89763779527559,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -285,7 +286,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Joselu'"
+                                "Value": "'Dani Carvajal'"
                               }
                             }
                           ]

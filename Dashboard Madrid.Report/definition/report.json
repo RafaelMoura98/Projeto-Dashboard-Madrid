@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY24SU10",
@@ -43,7 +43,11 @@
     "horizontalBarChartPBICraft",
     "TornadoChart1452517688218",
     "ScrollingTextVisual1448795304508",
-    "htmlContent443BE3AD55E043BF878BED274D3A6855"
+    "htmlContent443BE3AD55E043BF878BED274D3A6855",
+    "RadarChart1446119667547",
+    "synopticPanelByOKVIZC365478550CD4DC0A2ED985DC3E23EED",
+    "KGdev3DBI69f2181a7e5a44a9a709014959414bf0",
+    "pureVizInfographicC9801BF222134D2D83FA9C41861F3482"
   ],
   "resourcePackages": [
     {
@@ -54,6 +58,22 @@
           "name": "CY24SU10",
           "path": "BaseThemes/CY24SU10.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Frame_13669393928881822.svg",
+          "path": "Frame_13669393928881822.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Frame_234508058436270683.svg",
+          "path": "Frame_234508058436270683.svg",
+          "type": "Image"
         }
       ]
     }

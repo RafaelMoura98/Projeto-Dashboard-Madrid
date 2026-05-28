@@ -10,8 +10,8 @@ table 'Gols Marcados Detalhado'
 
 		variation Variation
 			isDefault
-			relationship: 93a774e0-c3b9-4e49-8e2d-76706060ec76
-			defaultHierarchy: LocalDateTable_d7fc6681-944e-4536-805f-36c2993573ae.'Hierarquia de datas'
+			relationship: 33e1056d-c3da-4000-8379-9a01bbdc0203
+			defaultHierarchy: LocalDateTable_19379be2-5052-441c-b5e0-8ce847253c5a.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -154,6 +154,14 @@ table 'Gols Marcados Detalhado'
 
 		annotation SummarizationSetBy = Automatic
 
+	column ID_Partida
+		dataType: string
+		lineageTag: 7bf2fc8a-9c9f-4a35-81e2-8ace099a40de
+		summarizeBy: none
+		sourceColumn: ID_Partida
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Gols Marcados Detalhado' = m
 		mode: import
 		source =
@@ -162,9 +170,13 @@ table 'Gols Marcados Detalhado'
 				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatísticas de Gols do Real Madrid csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Estatísticas de Gols do Real Madrid.csv"]}[Content],
 				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatísticas de Gols do Real Madrid csv",[Delimiter=",", Columns=18, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Data", type date}, {"Competição", type text}, {"Partida", type text}, {"Local", type text}, {"Marcador", type text}, {"Adversário", type text}, {"Titular", type text}, {"Parte do Corpo", type text}, {"Distância da Finalização", Int64.Type}, {"Minuto", type text}, {"Placar Antes do Gol", type text}, {"Goleiro Adversário", type text}, {"Assistência", type text}, {"Início de Jogada p/ Gol", type text}, {"Tipo", type text}, {"Pré-Ação de Gol", type text}, {"Tipo_1", type text}, {"Observações", type text}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Data", type date}, {"Competição", type text}, {"Partida", type text}, {"Local", type text}, {"Marcador", type text}, {"Adversário", type text}, {"Titular", type text}, {"Parte do Corpo", type text}, {"Distância da Finalização", Int64.Type}, {"Minuto", type text}, {"Placar Antes do Gol", type text}, {"Goleiro Adversário", type text}, {"Assistência", type text}, {"Início de Jogada p/ Gol", type text}, {"Tipo", type text}, {"Pré-Ação de Gol", type text}, {"Tipo_1", type text}, {"Observações", type text}}),
+				    #"Índice Adicionado" = Table.AddIndexColumn(#"Tipo Alterado", "Índice", 1, 0, Int64.Type),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Índice Adicionado",{{"Índice", type text}}),
+				    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Tipo Alterado1", "ID_Partida", each Text.Combine({Text.From([Data], "pt-BR"), [Partida], [Competição]}, " | "), type text),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Coluna Mesclada Inserida",{"Índice"})
 				in
-				    #"Tipo Alterado"
+				    #"Colunas Removidas"
 
 	annotation PBI_NavigationStepName = Navegação
 

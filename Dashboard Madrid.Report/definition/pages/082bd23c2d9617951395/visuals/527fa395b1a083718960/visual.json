@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "527fa395b1a083718960",
   "position": {
-    "x": 275.9851301115242,
-    "y": 183.19702602230484,
+    "x": 1037.1023622047244,
+    "y": 0,
     "z": 2000,
-    "height": 103.49442379182156,
-    "width": 223.64312267657994,
-    "tabOrder": 2000
+    "height": 103.81102362204724,
+    "width": 149.16535433070865,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "card",
@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Ações Defensivas"
+                      "Entity": "Medidas"
                     }
                   },
                   "Property": "% Passes Curtos"
@@ -40,7 +40,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Ações Defensivas"
+                    "Entity": "Medidas"
                   }
                 },
                 "Property": "% Passes Curtos"
@@ -51,6 +51,21 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "35D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

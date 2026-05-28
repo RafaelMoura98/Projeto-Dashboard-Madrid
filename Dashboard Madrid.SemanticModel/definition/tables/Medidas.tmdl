@@ -1,0 +1,185 @@
+table Medidas
+	lineageTag: d7b18ce9-dcb0-495d-b979-d8617a814ac0
+
+	measure '% Passes Curtos' = ```
+			
+			var Passescertos = sum(Passes[Passes Curtos Certos])
+			var PassesTentados = sum(Passes[Passes Curtos Tentados])
+			var PassesErrados = PassesTentados - Passescertos
+			var porcpass = Divide(Passescertos,PassesTentados)
+			Return
+			porcpass
+			
+			```
+		displayFolder: Passes
+		lineageTag: 5d5b186c-2095-455a-aa90-a4dd635cfcf6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Passes Longos' =
+			
+			var Passescertos = sum(Passes[Passes Longos Certos])
+			var PassesTentados = sum(Passes[Passes Longos Tentados])
+			var PassesErrados = PassesTentados - Passescertos
+			var porcpass = Divide(Passescertos,PassesTentados)
+			Return
+			porcpass
+		displayFolder: Passes
+		lineageTag: fc3b47d9-8564-4333-b43f-45b1d1b9bce0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Passes Médios' =
+			
+			var Passescertos = sum(Passes[Passes Médios Certos])
+			var PassesTentados = sum(Passes[Passes Médios Tentados])
+			var PassesErrados = PassesTentados - Passescertos
+			var porcpass = Divide(Passescertos,PassesTentados)
+			Return
+			porcpass
+		displayFolder: Passes
+		lineageTag: 09d9cd3e-123a-412b-9a2c-9837f0d86665
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'N° Derrotas' =
+			
+			CALCULATE(
+				COUNTA('Partidas Disputadas'[Resultado]),
+				'Partidas Disputadas'[Resultado] IN { "Derrota" }
+			)
+		formatString: 0
+		displayFolder: Partidas
+		lineageTag: e6e97a0a-31bb-4981-afc6-d34f14a462b6
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "FilteredMeasure"
+				}
+
+		changedProperty = FormatString
+
+	measure 'N° Empates' =
+			
+			CALCULATE(
+				COUNTA('Partidas Disputadas'[Resultado]),
+				'Partidas Disputadas'[Resultado] IN { "Empate" }
+			)
+		formatString: 0
+		displayFolder: Partidas
+		lineageTag: c4df8bde-69db-4775-8dd9-2814277b4194
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "FilteredMeasure"
+				}
+
+		changedProperty = FormatString
+
+	measure 'N° Vitórias' =
+			
+			CALCULATE(
+				COUNTA('Partidas Disputadas'[Resultado]),
+				'Partidas Disputadas'[Resultado] IN { "Vitória" }
+			)
+		formatString: 0
+		displayFolder: Partidas
+		lineageTag: 3f2b42b0-2d4e-40c1-b6bd-aeb2c7340500
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "FilteredMeasure"
+				}
+
+		changedProperty = FormatString
+
+	measure 'Média de Público Em Casa' =
+			Calculate(
+			AVERAGE('Partidas Disputadas'[Público]),'Partidas Disputadas'[Local] = "Casa")
+		displayFolder: Partidas
+		lineageTag: 62d4cd62-57a9-44b4-824a-57aecd72bc59
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Média de Contagem de Público por Público' =
+			
+			AVERAGEX(
+				KEEPFILTERS(VALUES('Partidas Disputadas'[Público])),
+				CALCULATE(COUNTA('Partidas Disputadas'[Público]))
+			)
+		displayFolder: Partidas
+		lineageTag: 67274e67-d2d3-4082-9d35-9ba3c2bd6d55
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Img Jogador' = ```
+			
+			 VAR img = SELECTEDVALUE('Base Jogadores'[Imagem Principal])
+			 VAR gols = sum('Gols e Minutos Jogados'[Total de Gols])
+			 Var ass = sum('Gols e Minutos Jogados'[Assistências])
+			 RETURN
+			 " 
+			 <style>
+			 img{
+			    width: 100%;
+			    height: 100%;
+			    object-fit: contain;
+			    align-items: center;
+			    }
+			 p{
+			    font-size: 16px;
+			    }
+			 </style>
+			 <p>"&gols& "   gols   "&ass&   "   assistências</p>
+			 <img src ='"&img&"'>"
+			
+			```
+		displayFolder: Visuais
+		lineageTag: b8340678-2749-405e-ae73-e021dfdfe8e5
+
+	measure 'Gols Sofridos Visual Balanço' = countrows('Gols Sofridos Detalhado')
+		formatString: 0
+		displayFolder: Partidas
+		lineageTag: bf6a5fb3-66c6-4dc3-b954-30cd1c9ef7b1
+
+	measure 'Gols Feitos Visual Balanço' = countrows('Gols Marcados Detalhado')
+		formatString: 0
+		displayFolder: Partidas
+		lineageTag: fe7355cc-4c90-496d-819c-2305e0defaa3
+
+	measure '% Drible Geradores de Chutes' = DIVIDE(SUM('Criações Ofensivas'[Dribles Criadores de Chute]),SUM('Posse de Bola'[Dribles Certos]))
+		lineageTag: 0e4ba437-bac3-47e0-bd2a-0ef561c94648
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

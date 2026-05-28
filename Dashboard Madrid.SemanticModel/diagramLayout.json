@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
-        "y": 1367.6450919999979
+        "x": 463.04294739006656,
+        "y": 6104.7671877455505
       },
       "nodes": [
         {
           "location": {
             "x": 463.1558561796985,
-            "y": 2357.6159388686378
+            "y": 6694.4562046663868
           },
           "nodeIndex": "Ações Defensivas",
           "nodeLineageTag": "591d727b-f7d0-45d0-b730-cab1f340f198",
@@ -19,12 +19,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 1000.9378906492657,
-            "y": 2721.9219134956479
+            "x": 2232.4954352382183,
+            "y": 6303.3742454161493
           },
           "nodeIndex": "Base Jogadores",
           "nodeLineageTag": "78219133-4478-400c-8518-6fb7bd8a24eb",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 1879.9104790897402,
-            "y": 2572.3865909583646
+            "y": 6909.2268567561132
           },
           "nodeIndex": "Base Países",
           "nodeLineageTag": "6f62b1d1-99e1-4f06-8f57-c2a99baa67a9",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 1281.0128395065174,
-            "y": 2132.5216574985911
+            "y": 6469.361923296341
           },
           "nodeIndex": "Base Times",
           "nodeLineageTag": "edd0745f-d14d-4a6e-b01a-86e91ce61873",
@@ -58,12 +58,12 @@
             "height": 176,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 4
         },
         {
           "location": {
             "x": 452.73268757597657,
-            "y": 2987.0035106209762
+            "y": 7323.8437764187256
           },
           "nodeIndex": "Chutes",
           "nodeLineageTag": "82d364cd-a560-40cd-b50d-8716b5272d6e",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 470.85876719996315,
-            "y": 1427.1614429263132
+            "y": 5764.0017087240631
           },
           "nodeIndex": "Criações Ofensivas",
           "nodeLineageTag": "2207dae0-8432-4cae-a40f-e1e15ae11665",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 1968.9197112565546,
-            "y": 2897.6401814979936
+            "y": 7234.4804472957421
           },
           "nodeIndex": "DataBase",
           "nodeLineageTag": "99e720db-d989-4c93-8b12-7cb27fc97201",
@@ -97,12 +97,12 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 448.07666928326705,
-            "y": 3654.1492157613079
+            "x": 444.533547283267,
+            "y": 8435.6512925590559
           },
           "nodeIndex": "Estatísticas Gerais",
           "nodeLineageTag": "b4a87780-a25c-442e-9c0c-dacc511b0aff",
@@ -115,7 +115,7 @@
         {
           "location": {
             "x": 448.5006878608915,
-            "y": 2670.8660153387873
+            "y": 7007.7062811365358
           },
           "nodeIndex": "Gols e Minutos Jogados",
           "nodeLineageTag": "e2d87282-3943-4429-8f52-5249c2623340",
@@ -127,8 +127,8 @@
         },
         {
           "location": {
-            "x": 1229.9845067872006,
-            "y": 3236.3292295078513
+            "x": 2209.6719752213771,
+            "y": 5091.1820800156593
           },
           "nodeIndex": "Gols Marcados Detalhado",
           "nodeLineageTag": "1ea44e5f-0b36-4681-b7a9-d8d7ea488ca0",
@@ -136,12 +136,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 18
         },
         {
           "location": {
-            "x": 1745.7446163310701,
-            "y": 3237.0178445521287
+            "x": 1380.2105298117922,
+            "y": 5022.9785034034121
           },
           "nodeIndex": "Gols Sofridos Detalhado",
           "nodeLineageTag": "614accfa-6cc3-4706-bba6-b1349d9daba2",
@@ -153,8 +153,8 @@
         },
         {
           "location": {
-            "x": 1305.8811335189534,
-            "y": 1214.1907010632269
+            "x": 1800.4527930157612,
+            "y": 5242.9112428933158
           },
           "nodeIndex": "Partidas Disputadas",
           "nodeLineageTag": "36efe1ac-3ead-43af-a658-df5667dcee61",
@@ -167,7 +167,7 @@
         {
           "location": {
             "x": 453.11818950520285,
-            "y": 3327.3129948213832
+            "y": 7664.1532606191322
           },
           "nodeIndex": "Passes",
           "nodeLineageTag": "1a7812c6-7210-4506-9a48-a007279acd64",
@@ -179,8 +179,8 @@
         },
         {
           "location": {
-            "x": 467.55631480555962,
-            "y": 2049.6665097490268
+            "x": 157.53313980556004,
+            "y": 8069.4897255467731
           },
           "nodeIndex": "Passes Detalhados",
           "nodeLineageTag": "148cad11-07b1-4d72-a704-5682e2538cb7",
@@ -193,7 +193,7 @@
         {
           "location": {
             "x": 467.382813060234,
-            "y": 1736.8839103170478
+            "y": 6073.724176114798
           },
           "nodeIndex": "Posse de Bola",
           "nodeLineageTag": "a96c88e8-b503-452a-8ba0-819bb5c3ed9b",
@@ -206,7 +206,7 @@
         {
           "location": {
             "x": 1749.2783288614364,
-            "y": 1949.8814924151902
+            "y": 6286.72175821294
           },
           "nodeIndex": "Titulos",
           "nodeLineageTag": "3f4c6c8e-7ab0-4c4d-8581-164310ddc3ae",
@@ -219,10 +219,23 @@
         {
           "location": {
             "x": 0,
-            "y": 2722.7277376772658
+            "y": 7059.5680034750148
           },
           "nodeIndex": "Temporadas",
           "nodeLineageTag": "e3974a35-fe3b-4122-ade7-c6420d032f3b",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1321.3505009316482,
+            "y": 4638.4600154710561
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "d7b18ce9-dcb0-495d-b979-d8617a814ac0",
           "size": {
             "height": 104,
             "width": 234
@@ -231,7 +244,7 @@
         }
       ],
       "name": "Todas as tabelas",
-      "zoomValue": 56.447393005377833,
+      "zoomValue": 89.192590520569908,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

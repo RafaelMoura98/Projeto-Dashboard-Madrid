@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "946a2d788b676419b361",
   "position": {
-    "x": 42.330708661417326,
-    "y": 124.97637795275591,
+    "x": 40,
+    "y": 130.66666666666666,
     "z": 6000,
-    "height": 234.83464566929135,
-    "width": 615.81102362204729,
-    "tabOrder": 4000
+    "height": 229.33333333333334,
+    "width": 590.22222222222217,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "lineChart",
@@ -20,67 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Partidas Disputadas"
+                      "Entity": "Temporadas"
                     }
                   },
-                  "Property": "Temporada"
+                  "Property": "Temporadas"
                 }
               },
-              "queryRef": "Partidas Disputadas.Temporada",
-              "nativeQueryRef": "Temporada",
+              "queryRef": "Temporadas.Temporadas",
+              "nativeQueryRef": "Temporadas",
               "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Partidas Disputadas"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Data"
-                        }
-                      },
-                      "Hierarchy": "Hierarquia de datas"
-                    }
-                  },
-                  "Level": "Mês"
-                }
-              },
-              "queryRef": "Partidas Disputadas.Data.Variation.Hierarquia de datas.Mês",
-              "nativeQueryRef": "Data Mês",
-              "active": false
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Partidas Disputadas"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Data"
-                        }
-                      },
-                      "Hierarchy": "Hierarquia de datas"
-                    }
-                  },
-                  "Level": "Dia"
-                }
-              },
-              "queryRef": "Partidas Disputadas.Data.Variation.Hierarquia de datas.Dia",
-              "nativeQueryRef": "Data Dia",
-              "active": false
             }
           ]
         },
@@ -88,31 +36,41 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Ações Defensivas"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Gols Feitos"
                     }
                   },
-                  "Property": "Gols Feitos Visual Balanço"
+                  "Function": 0
                 }
               },
-              "queryRef": "Ações Defensivas.Gols Feitos Visual Balanço",
-              "nativeQueryRef": "Gols Feitos Visual Balanço"
+              "queryRef": "Sum(Partidas Disputadas.Gols Feitos)",
+              "nativeQueryRef": "Soma de Gols Feitos"
             },
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Ações Defensivas"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Partidas Disputadas"
+                        }
+                      },
+                      "Property": "Gols Sofridos"
                     }
                   },
-                  "Property": "Gols Sofridos Visual Balanço"
+                  "Function": 0
                 }
               },
-              "queryRef": "Ações Defensivas.Gols Sofridos Visual Balanço",
-              "nativeQueryRef": "Gols Sofridos Visual Balanço"
+              "queryRef": "Sum(Partidas Disputadas.Gols Sofridos)",
+              "nativeQueryRef": "Soma de Gols Sofridos"
             }
           ]
         }
@@ -121,18 +79,24 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "Partidas Disputadas"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Partidas Disputadas"
+                      }
+                    },
+                    "Property": "Gols Feitos"
                   }
                 },
-                "Property": "Temporada"
+                "Function": 0
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -140,6 +104,32 @@
         {
           "properties": {
             "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verdana'"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -176,6 +166,18 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -236,6 +238,13 @@
                   "Value": "'square'"
                 }
               }
+            },
+            "lineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dashed'"
+                }
+              }
             }
           }
         },
@@ -280,34 +289,6 @@
           "selector": {
             "metadata": "Ações Defensivas.Gols Feitos Visual Balanço"
           }
-        },
-        {
-          "properties": {
-            "lineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'dotted'"
-                }
-              }
-            },
-            "strokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "5D"
-                }
-              }
-            },
-            "lineChartType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'smooth'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Ações Defensivas.Gols Sofridos Visual Balanço"
-          }
         }
       ],
       "legend": [
@@ -349,7 +330,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#7F0303'"
+                      "Value": "'#006A0A'"
                     }
                   }
                 }
@@ -357,7 +338,25 @@
             }
           },
           "selector": {
-            "metadata": "Ações Defensivas.Gols Sofridos Visual Balanço"
+            "metadata": "Sum(Partidas Disputadas.Gols Feitos)"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#660202'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Partidas Disputadas.Gols Sofridos)"
           }
         }
       ]
@@ -370,6 +369,24 @@
               "expr": {
                 "Literal": {
                   "Value": "'N° de Gols por Temporada'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verdana'"
                 }
               }
             }
@@ -403,6 +420,19 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "showActionsInTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

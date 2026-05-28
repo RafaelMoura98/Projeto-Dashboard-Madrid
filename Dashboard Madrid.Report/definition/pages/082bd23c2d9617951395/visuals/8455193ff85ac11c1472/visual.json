@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "8455193ff85ac11c1472",
   "position": {
-    "x": 276.15748031496065,
+    "x": 276,
     "y": 0,
     "z": 1000,
-    "height": 200.56692913385828,
-    "width": 760.94488188976379,
-    "tabOrder": 1000
+    "height": 166,
+    "width": 761,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "pivotTable",
@@ -71,25 +71,6 @@
               },
               "queryRef": "Sum(Passes.Passes Certos)",
               "nativeQueryRef": "Soma de Passes Certos"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Passes"
-                        }
-                      },
-                      "Property": "Cruzamentos p/ Grande Área"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(Passes.Cruzamentos p/ Grande Área)",
-              "nativeQueryRef": "Soma de Cruzamentos p/ Grande Área"
             }
           ]
         }

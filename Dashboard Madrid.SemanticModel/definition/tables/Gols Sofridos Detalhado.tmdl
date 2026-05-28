@@ -154,6 +154,14 @@ table 'Gols Sofridos Detalhado'
 
 		annotation SummarizationSetBy = Automatic
 
+	column ID_Partida
+		dataType: string
+		lineageTag: 3a529669-0998-4126-989b-39e99578e21b
+		summarizeBy: none
+		sourceColumn: ID_Partida
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Gols Sofridos Detalhado' = m
 		mode: import
 		source =
@@ -162,9 +170,10 @@ table 'Gols Sofridos Detalhado'
 				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatística de Gols Contra o Real Madrid csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Estatística de Gols Contra o Real Madrid.csv"]}[Content],
 				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Estatística de Gols Contra o Real Madrid csv",[Delimiter=",", Columns=18, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Data", type date}, {"Competição", type text}, {"Partida", type text}, {"Local", type text}, {"Marcador", type text}, {"Adversário", type text}, {"Titular", type text}, {"Parte do Corpo", type text}, {"Distância da Finalização", Int64.Type}, {"Minuto", type text}, {"Placar Antes do Gol", type text}, {"Goleiro", type text}, {"Assistência", type text}, {"Início de Jogada p/ Gol", type text}, {"Tipo", type text}, {"Pré-Ação de Gol", type text}, {"Tipo_1", type text}, {"Observações", type text}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Data", type date}, {"Competição", type text}, {"Partida", type text}, {"Local", type text}, {"Marcador", type text}, {"Adversário", type text}, {"Titular", type text}, {"Parte do Corpo", type text}, {"Distância da Finalização", Int64.Type}, {"Minuto", type text}, {"Placar Antes do Gol", type text}, {"Goleiro", type text}, {"Assistência", type text}, {"Início de Jogada p/ Gol", type text}, {"Tipo", type text}, {"Pré-Ação de Gol", type text}, {"Tipo_1", type text}, {"Observações", type text}}),
+				    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Tipo Alterado", "ID_Partida", each Text.Combine({Text.From([Data], "pt-BR"), [Partida], [Competição]}, " | "), type text)
 				in
-				    #"Tipo Alterado"
+				    #"Coluna Mesclada Inserida"
 
 	annotation PBI_NavigationStepName = Navegação
 

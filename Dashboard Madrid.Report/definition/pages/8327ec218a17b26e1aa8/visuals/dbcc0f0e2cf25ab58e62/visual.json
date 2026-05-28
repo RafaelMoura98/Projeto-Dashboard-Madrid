@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "dbcc0f0e2cf25ab58e62",
   "position": {
-    "x": 696.44094488188978,
-    "y": 83.653543307086608,
+    "x": 676.44444444444446,
+    "y": 86.222222222222229,
     "z": 7000,
-    "height": 276.15748031496065,
-    "width": 564.40944881889766,
-    "tabOrder": 5000
+    "height": 280.88888888888891,
+    "width": 584,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -60,7 +60,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Ações Defensivas"
+                      "Entity": "Medidas"
                     }
                   },
                   "Property": "Gols Sofridos Visual Balanço"
@@ -75,7 +75,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Ações Defensivas"
+                      "Entity": "Medidas"
                     }
                   },
                   "Property": "Gols Feitos Visual Balanço"
@@ -132,13 +132,18 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "Ações Defensivas"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Partidas Disputadas"
+                      }
+                    },
+                    "Property": "Gols Sofridos"
                   }
                 },
-                "Property": "Gols Feitos Visual Balanço"
+                "Function": 0
               }
             },
             "direction": "Descending"
@@ -180,9 +185,19 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -354,6 +369,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           }
         }
@@ -364,7 +386,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "99.07952694437785D"
+                  "Value": "127.5015423993534D"
                 }
               }
             }
@@ -897,7 +919,7 @@
             "autoSizeColumnWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -911,7 +933,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "11D"
                 }
               }
             },
@@ -919,9 +941,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -983,6 +1004,19 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "layout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Compact'"
                 }
               }
             }

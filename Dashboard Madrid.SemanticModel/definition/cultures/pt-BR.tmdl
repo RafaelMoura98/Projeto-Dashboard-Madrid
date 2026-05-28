@@ -1855,10 +1855,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "ações_defensiva.gols_feitos_visual_balanço": {
+			    "medida.gols_feitos_visual_balanço": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Ações Defensivas",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "Gols Feitos Visual Balanço"
 			        }
 			      },
@@ -1881,10 +1881,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "ações_defensiva.gols_sofridos_visual_balanço": {
+			    "medida.gols_sofridos_visual_balanço": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Ações Defensivas",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "Gols Sofridos Visual Balanço"
 			        }
 			      },
@@ -1907,10 +1907,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "ações_defensiva.n_vitórias": {
+			    "medida.n_vitórias": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Ações Defensivas",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "N° Vitórias"
 			        }
 			      },
@@ -1923,10 +1923,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "ações_defensiva.n_derrotas": {
+			    "medida.n_derrotas": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Ações Defensivas",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "N° Derrotas"
 			        }
 			      },
@@ -1939,10 +1939,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "ações_defensiva.n_empates": {
+			    "medida.n_empates": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Ações Defensivas",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "N° Empates"
 			        }
 			      },
@@ -1955,10 +1955,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "ações_defensiva.média_de_contagem_de_público_por_público": {
+			    "medida.média_de_contagem_de_público_por_público": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Ações Defensivas",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "Média de Contagem de Público por Público"
 			        }
 			      },
@@ -1971,10 +1971,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "ações_defensiva.média_de_público_em_casa": {
+			    "medida.média_de_público_em_casa": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Ações Defensivas",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "Média de Público Em Casa"
 			        }
 			      },
@@ -3834,9 +3834,6 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "adversário": {
@@ -5279,6 +5276,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "marcador": {
@@ -5295,9 +5295,6 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "adversário": {
@@ -9226,141 +9223,485 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.passes_curtos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Passes Curtos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% passes curtos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage pass curto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct pass curto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.passes_longos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Passes Longos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% passes longos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage pass longo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct pass longo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.passes_médios": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Passes Médios"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% passes médios": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage pass médio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct pass médio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.img_jogador": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Img Jogador"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "img jogador": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.drible_geradores_de_chutes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Drible Geradores de Chutes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% drible geradores de chutes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage drible geradore de chute": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct drible geradore de chute": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "% drible geradore de waterfall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% drible geradore de cataract": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% drible geradore de descent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% drible geradore de cascades": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "% drible geradore de force": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "% drible geradore de drop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "% drible geradore de rapid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "% drible geradore de trough": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        }
+			      ]
+			    },
+			    "gols_sofridos_detalhado.ID_partida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gols Sofridos Detalhado",
+			          "ConceptualProperty": "ID_Partida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ID partida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ID_Partida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "gols_marcados_detalhado.ID_partida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gols Marcados Detalhado",
+			          "ConceptualProperty": "ID_Partida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ID partida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ID_Partida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "partidas_disputada.índice": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Partidas Disputadas",
+			          "ConceptualProperty": "Índice"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "índice": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "partidas_disputada.ID_partida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Partidas Disputadas",
+			          "ConceptualProperty": "ID_Partida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ID partida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ID_Partida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential partida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Partida": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "partidas_disputada_data_ano_has_partidas_disputada_data_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "Partidas Disputadas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "partidas_disputada.data.ano": {
-			          "Target": {
-			            "Entity": "partidas_disputada.data.ano"
-			          }
-			        },
-			        "partidas_disputada.data.trimestre": {
-			          "Target": {
-			            "Entity": "partidas_disputada.data.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "partidas_disputada.data.ano"
-			            },
-			            "Object": {
-			              "Role": "partidas_disputada.data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "partidas_disputada.data.trimestre"
-			            },
-			            "Object": {
-			              "Role": "partidas_disputada.data.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "partidas_disputada.data.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "partidas_disputada.data.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos5"
-			        }
-			      ]
-			    },
-			    "partidas_disputada_data_hierarquia_de_data_has_partidas_disputada_data_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "Partidas Disputadas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "partidas_disputada.data.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "partidas_disputada.data.hierarquia_de_data"
-			          }
-			        },
-			        "partidas_disputada.data.dia": {
-			          "Target": {
-			            "Entity": "partidas_disputada.data.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "partidas_disputada.data.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "partidas_disputada.data.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
-			    "partidas_disputada_data_hierarquia_de_data_has_partidas_disputada_data_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "Partidas Disputadas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "partidas_disputada.data.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "partidas_disputada.data.hierarquia_de_data"
-			          }
-			        },
-			        "partidas_disputada.data.mê": {
-			          "Target": {
-			            "Entity": "partidas_disputada.data.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "partidas_disputada.data.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "partidas_disputada.data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
-			        }
-			      ]
-			    },
 			    "partidas_disputada_data_hierarquia_de_data_has_partidas_disputada_data_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "Partidas Disputadas"
@@ -9621,7 +9962,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres1"
+			          "ID": "anos_have_trimestres"
 			        },
 			        {
 			          "Attribute": {
@@ -9634,7 +9975,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos1"
+			          "ID": "trimestres_have_anos"
 			        },
 			        {
 			          "Preposition": {
@@ -9687,7 +10028,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
+			          "ID": "hierarquia_de_data_have_dias"
 			        }
 			      ]
 			    },
@@ -9720,7 +10061,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê1"
+			          "ID": "hierarquia_de_data_have_mê"
 			        }
 			      ]
 			    },
@@ -9984,7 +10325,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres2"
+			          "ID": "anos_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -9997,7 +10338,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos2"
+			          "ID": "trimestres_have_anos1"
 			        },
 			        {
 			          "Preposition": {
@@ -10050,7 +10391,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias2"
+			          "ID": "hierarquia_de_data_have_dias1"
 			        }
 			      ]
 			    },
@@ -10083,7 +10424,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê2"
+			          "ID": "hierarquia_de_data_have_mê1"
 			        }
 			      ]
 			    },
@@ -10347,7 +10688,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres3"
+			          "ID": "anos_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
@@ -10360,7 +10701,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos3"
+			          "ID": "trimestres_have_anos2"
 			        },
 			        {
 			          "Preposition": {
@@ -10413,7 +10754,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias3"
+			          "ID": "hierarquia_de_data_have_dias2"
 			        }
 			      ]
 			    },
@@ -10446,7 +10787,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê3"
+			          "ID": "hierarquia_de_data_have_mê2"
 			        }
 			      ]
 			    },
@@ -10710,7 +11051,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres4"
+			          "ID": "anos_have_trimestres3"
 			        },
 			        {
 			          "Attribute": {
@@ -10723,7 +11064,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos4"
+			          "ID": "trimestres_have_anos3"
 			        },
 			        {
 			          "Preposition": {
@@ -10776,7 +11117,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias4"
+			          "ID": "hierarquia_de_data_have_dias3"
 			        }
 			      ]
 			    },
@@ -10809,7 +11150,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê4"
+			          "ID": "hierarquia_de_data_have_mê3"
 			        }
 			      ]
 			    },
@@ -11073,7 +11414,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres5"
+			          "ID": "anos_have_trimestres4"
 			        },
 			        {
 			          "Attribute": {
@@ -11086,7 +11427,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos5"
+			          "ID": "trimestres_have_anos4"
 			        },
 			        {
 			          "Preposition": {
@@ -11139,7 +11480,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias5"
+			          "ID": "hierarquia_de_data_have_dias4"
 			        }
 			      ]
 			    },
@@ -11172,7 +11513,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê5"
+			          "ID": "hierarquia_de_data_have_mê4"
 			        }
 			      ]
 			    },
@@ -11814,7 +12155,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "gols_marcados_detalhado_has_base_times": {
+			    "gols_marcados_detalhado_has_partidas_disputada": {
 			      "Binding": {
 			        "ConceptualEntity": "Gols Marcados Detalhado"
 			      },
@@ -11825,9 +12166,9 @@ cultureInfo pt-BR
 			            "Entity": "gols_marcados_detalhado"
 			          }
 			        },
-			        "base_times": {
+			        "partidas_disputada": {
 			          "Target": {
-			            "Entity": "base_times"
+			            "Entity": "partidas_disputada"
 			          }
 			        }
 			      },
@@ -11838,17 +12179,17 @@ cultureInfo pt-BR
 			              "Role": "gols_marcados_detalhado"
 			            },
 			            "Object": {
-			              "Role": "base_times"
+			              "Role": "partidas_disputada"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gols_marcados_detalhados_have_base_times"
+			          "ID": "gols_marcados_detalhados_have_partidas_disputadas"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_times"
+			              "Role": "partidas_disputada"
 			            },
 			            "Object": {
 			              "Role": "gols_marcados_detalhado"
@@ -11856,7 +12197,53 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "base_times_have_gols_marcados_detalhados"
+			          "ID": "partidas_disputadas_have_gols_marcados_detalhados"
+			        }
+			      ]
+			    },
+			    "gols_marcados_detalhado_has_base_jogadore": {
+			      "Binding": {
+			        "ConceptualEntity": "Gols Marcados Detalhado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gols_marcados_detalhado": {
+			          "Target": {
+			            "Entity": "gols_marcados_detalhado"
+			          }
+			        },
+			        "base_jogadore": {
+			          "Target": {
+			            "Entity": "base_jogadore"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gols_marcados_detalhado"
+			            },
+			            "Object": {
+			              "Role": "base_jogadore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gols_marcados_detalhados_have_base_jogadores"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_jogadore"
+			            },
+			            "Object": {
+			              "Role": "gols_marcados_detalhado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_jogadores_have_gols_marcados_detalhados"
 			        }
 			      ]
 			    },
@@ -11952,7 +12339,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "gols_sofridos_detalhado_has_base_times": {
+			    "gols_sofridos_detalhado_has_partidas_disputada": {
 			      "Binding": {
 			        "ConceptualEntity": "Gols Sofridos Detalhado"
 			      },
@@ -11963,9 +12350,9 @@ cultureInfo pt-BR
 			            "Entity": "gols_sofridos_detalhado"
 			          }
 			        },
-			        "base_times": {
+			        "partidas_disputada": {
 			          "Target": {
-			            "Entity": "base_times"
+			            "Entity": "partidas_disputada"
 			          }
 			        }
 			      },
@@ -11976,17 +12363,17 @@ cultureInfo pt-BR
 			              "Role": "gols_sofridos_detalhado"
 			            },
 			            "Object": {
-			              "Role": "base_times"
+			              "Role": "partidas_disputada"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gols_sofridos_detalhados_have_base_times"
+			          "ID": "gols_sofridos_detalhados_have_partidas_disputadas"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_times"
+			              "Role": "partidas_disputada"
 			            },
 			            "Object": {
 			              "Role": "gols_sofridos_detalhado"
@@ -11994,11 +12381,11 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "base_times_have_gols_sofridos_detalhados"
+			          "ID": "partidas_disputadas_have_gols_sofridos_detalhados"
 			        }
 			      ]
 			    },
-			    "passes_detalhado_has_temporada": {
+			    "passes_detalhado_has_pass": {
 			      "Binding": {
 			        "ConceptualEntity": "Passes Detalhados"
 			      },
@@ -12009,122 +12396,17 @@ cultureInfo pt-BR
 			            "Entity": "passes_detalhado"
 			          }
 			        },
-			        "temporada": {
-			          "Target": {
-			            "Entity": "temporada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "passes_detalhado"
-			            },
-			            "Object": {
-			              "Role": "temporada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "passes_detalhados_have_temporadas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "temporada"
-			            },
-			            "Object": {
-			              "Role": "passes_detalhado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "temporadas_have_passes_detalhados"
-			        }
-			      ]
-			    },
-			    "passes_detalhado_has_base_jogadore": {
-			      "Binding": {
-			        "ConceptualEntity": "Passes Detalhados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "passes_detalhado": {
-			          "Target": {
-			            "Entity": "passes_detalhado"
-			          }
-			        },
-			        "base_jogadore": {
-			          "Target": {
-			            "Entity": "base_jogadore"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "passes_detalhado"
-			            },
-			            "Object": {
-			              "Role": "base_jogadore"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "passes_detalhados_have_base_jogadores"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_jogadore"
-			            },
-			            "Object": {
-			              "Role": "passes_detalhado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_jogadores_have_passes_detalhados"
-			        }
-			      ]
-			    },
-			    "pass_has_temporada": {
-			      "Binding": {
-			        "ConceptualEntity": "Passes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
 			        "pass": {
 			          "Target": {
 			            "Entity": "pass"
 			          }
-			        },
-			        "temporada": {
-			          "Target": {
-			            "Entity": "temporada"
-			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "pass"
-			            },
-			            "Object": {
-			              "Role": "temporada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "passes_have_temporadas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "temporada"
+			              "Role": "passes_detalhado"
 			            },
 			            "Object": {
 			              "Role": "pass"
@@ -12132,53 +12414,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "temporadas_have_passes"
-			        }
-			      ]
-			    },
-			    "pass_has_base_jogadore": {
-			      "Binding": {
-			        "ConceptualEntity": "Passes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "pass": {
-			          "Target": {
-			            "Entity": "pass"
-			          }
-			        },
-			        "base_jogadore": {
-			          "Target": {
-			            "Entity": "base_jogadore"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "pass"
-			            },
-			            "Object": {
-			              "Role": "base_jogadore"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "passes_have_base_jogadores"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_jogadore"
-			            },
-			            "Object": {
-			              "Role": "pass"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_jogadores_have_passes"
+			          "ID": "passes_detalhados_have_passes"
 			        }
 			      ]
 			    },
@@ -12271,6 +12507,303 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "base_jogadores_have_ações_defensivas"
+			        }
+			      ]
+			    },
+			    "partidas_disputada_has_ID_partida": {
+			      "Binding": {
+			        "ConceptualEntity": "Partidas Disputadas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "partidas_disputada": {
+			          "Target": {
+			            "Entity": "partidas_disputada"
+			          }
+			        },
+			        "partidas_disputada.ID_partida": {
+			          "Target": {
+			            "Entity": "partidas_disputada.ID_partida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partidas_disputada"
+			            },
+			            "Object": {
+			              "Role": "partidas_disputada.ID_partida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "partidas_disputadas_have_ID_partidas"
+			        }
+			      ]
+			    },
+			    "partidas_disputada_has_índice": {
+			      "Binding": {
+			        "ConceptualEntity": "Partidas Disputadas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "partidas_disputada": {
+			          "Target": {
+			            "Entity": "partidas_disputada"
+			          }
+			        },
+			        "partidas_disputada.índice": {
+			          "Target": {
+			            "Entity": "partidas_disputada.índice"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partidas_disputada"
+			            },
+			            "Object": {
+			              "Role": "partidas_disputada.índice"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "partidas_disputadas_have_índices"
+			        }
+			      ]
+			    },
+			    "posse_de_bola_has_medida_drible_geradores_de_chutes": {
+			      "Binding": {
+			        "ConceptualEntity": "Posse de Bola"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "posse_de_bola": {
+			          "Target": {
+			            "Entity": "posse_de_bola"
+			          }
+			        },
+			        "medida.drible_geradores_de_chutes": {
+			          "Target": {
+			            "Entity": "medida.drible_geradores_de_chutes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "posse_de_bola"
+			            },
+			            "Object": {
+			              "Role": "medida.drible_geradores_de_chutes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "posse_de_bolas_have__drible_geradores_de_chutes"
+			        }
+			      ]
+			    },
+			    "criações_ofensiva_has_medida_drible_geradores_de_chutes": {
+			      "Binding": {
+			        "ConceptualEntity": "Criações Ofensivas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "criações_ofensiva": {
+			          "Target": {
+			            "Entity": "criações_ofensiva"
+			          }
+			        },
+			        "medida.drible_geradores_de_chutes": {
+			          "Target": {
+			            "Entity": "medida.drible_geradores_de_chutes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "criações_ofensiva"
+			            },
+			            "Object": {
+			              "Role": "medida.drible_geradores_de_chutes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "criações_ofensivas_have__drible_geradores_de_chutes"
+			        }
+			      ]
+			    },
+			    "gols_e_minutos_jogado_has_medida_img_jogador": {
+			      "Binding": {
+			        "ConceptualEntity": "Gols e Minutos Jogados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gols_e_minutos_jogado": {
+			          "Target": {
+			            "Entity": "gols_e_minutos_jogado"
+			          }
+			        },
+			        "medida.img_jogador": {
+			          "Target": {
+			            "Entity": "medida.img_jogador"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gols_e_minutos_jogado"
+			            },
+			            "Object": {
+			              "Role": "medida.img_jogador"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gols_e_minutos_jogados_have_img_jogador"
+			        }
+			      ]
+			    },
+			    "base_jogadore_has_medida_img_jogador": {
+			      "Binding": {
+			        "ConceptualEntity": "Base Jogadores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_jogadore": {
+			          "Target": {
+			            "Entity": "base_jogadore"
+			          }
+			        },
+			        "medida.img_jogador": {
+			          "Target": {
+			            "Entity": "medida.img_jogador"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_jogadore"
+			            },
+			            "Object": {
+			              "Role": "medida.img_jogador"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_jogadores_have_img_jogador"
+			        }
+			      ]
+			    },
+			    "pass_has_medida_passes_médios": {
+			      "Binding": {
+			        "ConceptualEntity": "Passes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "pass": {
+			          "Target": {
+			            "Entity": "pass"
+			          }
+			        },
+			        "medida.passes_médios": {
+			          "Target": {
+			            "Entity": "medida.passes_médios"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "pass"
+			            },
+			            "Object": {
+			              "Role": "medida.passes_médios"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "passes_have__passes_médios"
+			        }
+			      ]
+			    },
+			    "pass_has_medida_passes_longos": {
+			      "Binding": {
+			        "ConceptualEntity": "Passes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "pass": {
+			          "Target": {
+			            "Entity": "pass"
+			          }
+			        },
+			        "medida.passes_longos": {
+			          "Target": {
+			            "Entity": "medida.passes_longos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "pass"
+			            },
+			            "Object": {
+			              "Role": "medida.passes_longos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "passes_have__passes_longos"
+			        }
+			      ]
+			    },
+			    "pass_has_medida_passes_curtos": {
+			      "Binding": {
+			        "ConceptualEntity": "Passes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "pass": {
+			          "Target": {
+			            "Entity": "pass"
+			          }
+			        },
+			        "medida.passes_curtos": {
+			          "Target": {
+			            "Entity": "medida.passes_curtos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "pass"
+			            },
+			            "Object": {
+			              "Role": "medida.passes_curtos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "passes_have__passes_curtos"
 			        }
 			      ]
 			    },
@@ -15640,7 +16173,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "gols_marcados_detalhado_has_marcador": {
+			    "gols_marcados_detalhado_has_adversário": {
 			      "Binding": {
 			        "ConceptualEntity": "Gols Marcados Detalhado"
 			      },
@@ -15651,9 +16184,9 @@ cultureInfo pt-BR
 			            "Entity": "gols_marcados_detalhado"
 			          }
 			        },
-			        "gols_marcados_detalhado.marcador": {
+			        "gols_marcados_detalhado.adversário": {
 			          "Target": {
-			            "Entity": "gols_marcados_detalhado.marcador"
+			            "Entity": "gols_marcados_detalhado.adversário"
 			          }
 			        }
 			      },
@@ -15664,12 +16197,12 @@ cultureInfo pt-BR
 			              "Role": "gols_marcados_detalhado"
 			            },
 			            "Object": {
-			              "Role": "gols_marcados_detalhado.marcador"
+			              "Role": "gols_marcados_detalhado.adversário"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gols_marcados_detalhados_have_marcadors"
+			          "ID": "gols_marcados_detalhados_have_adversários"
 			        }
 			      ]
 			    },
@@ -16495,6 +17028,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "gols_sofridos_detalhados_have_titulars"
+			        }
+			      ]
+			    },
+			    "gols_sofridos_detalhado_has_adversário": {
+			      "Binding": {
+			        "ConceptualEntity": "Gols Sofridos Detalhado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gols_sofridos_detalhado": {
+			          "Target": {
+			            "Entity": "gols_sofridos_detalhado"
+			          }
+			        },
+			        "gols_sofridos_detalhado.adversário": {
+			          "Target": {
+			            "Entity": "gols_sofridos_detalhado.adversário"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gols_sofridos_detalhado"
+			            },
+			            "Object": {
+			              "Role": "gols_sofridos_detalhado.adversário"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gols_sofridos_detalhados_have_adversários"
 			        }
 			      ]
 			    },
@@ -17620,7 +18186,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "partidas_disputada_has_ações_defensiva_média_de_público_em_casa": {
+			    "partidas_disputada_has_medida_média_de_público_em_casa": {
 			      "Binding": {
 			        "ConceptualEntity": "Partidas Disputadas"
 			      },
@@ -17631,9 +18197,9 @@ cultureInfo pt-BR
 			            "Entity": "partidas_disputada"
 			          }
 			        },
-			        "ações_defensiva.média_de_público_em_casa": {
+			        "medida.média_de_público_em_casa": {
 			          "Target": {
-			            "Entity": "ações_defensiva.média_de_público_em_casa"
+			            "Entity": "medida.média_de_público_em_casa"
 			          }
 			        }
 			      },
@@ -17644,7 +18210,7 @@ cultureInfo pt-BR
 			              "Role": "partidas_disputada"
 			            },
 			            "Object": {
-			              "Role": "ações_defensiva.média_de_público_em_casa"
+			              "Role": "medida.média_de_público_em_casa"
 			            }
 			          },
 			          "State": "Generated",
@@ -17653,7 +18219,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "partidas_disputada_has_ações_defensiva_média_de_contagem_de_público_por_público": {
+			    "partidas_disputada_has_medida_média_de_contagem_de_público_por_público": {
 			      "Binding": {
 			        "ConceptualEntity": "Partidas Disputadas"
 			      },
@@ -17664,9 +18230,9 @@ cultureInfo pt-BR
 			            "Entity": "partidas_disputada"
 			          }
 			        },
-			        "ações_defensiva.média_de_contagem_de_público_por_público": {
+			        "medida.média_de_contagem_de_público_por_público": {
 			          "Target": {
-			            "Entity": "ações_defensiva.média_de_contagem_de_público_por_público"
+			            "Entity": "medida.média_de_contagem_de_público_por_público"
 			          }
 			        }
 			      },
@@ -17677,7 +18243,7 @@ cultureInfo pt-BR
 			              "Role": "partidas_disputada"
 			            },
 			            "Object": {
-			              "Role": "ações_defensiva.média_de_contagem_de_público_por_público"
+			              "Role": "medida.média_de_contagem_de_público_por_público"
 			            }
 			          },
 			          "State": "Generated",
@@ -17686,7 +18252,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "partidas_disputada_has_ações_defensiva_n_empates": {
+			    "partidas_disputada_has_medida_n_empates": {
 			      "Binding": {
 			        "ConceptualEntity": "Partidas Disputadas"
 			      },
@@ -17697,9 +18263,9 @@ cultureInfo pt-BR
 			            "Entity": "partidas_disputada"
 			          }
 			        },
-			        "ações_defensiva.n_empates": {
+			        "medida.n_empates": {
 			          "Target": {
-			            "Entity": "ações_defensiva.n_empates"
+			            "Entity": "medida.n_empates"
 			          }
 			        }
 			      },
@@ -17710,7 +18276,7 @@ cultureInfo pt-BR
 			              "Role": "partidas_disputada"
 			            },
 			            "Object": {
-			              "Role": "ações_defensiva.n_empates"
+			              "Role": "medida.n_empates"
 			            }
 			          },
 			          "State": "Generated",
@@ -17719,7 +18285,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "partidas_disputada_has_ações_defensiva_n_derrotas": {
+			    "partidas_disputada_has_medida_n_derrotas": {
 			      "Binding": {
 			        "ConceptualEntity": "Partidas Disputadas"
 			      },
@@ -17730,9 +18296,9 @@ cultureInfo pt-BR
 			            "Entity": "partidas_disputada"
 			          }
 			        },
-			        "ações_defensiva.n_derrotas": {
+			        "medida.n_derrotas": {
 			          "Target": {
-			            "Entity": "ações_defensiva.n_derrotas"
+			            "Entity": "medida.n_derrotas"
 			          }
 			        }
 			      },
@@ -17743,7 +18309,7 @@ cultureInfo pt-BR
 			              "Role": "partidas_disputada"
 			            },
 			            "Object": {
-			              "Role": "ações_defensiva.n_derrotas"
+			              "Role": "medida.n_derrotas"
 			            }
 			          },
 			          "State": "Generated",
@@ -17752,7 +18318,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "partidas_disputada_has_ações_defensiva_n_vitórias": {
+			    "partidas_disputada_has_medida_n_vitórias": {
 			      "Binding": {
 			        "ConceptualEntity": "Partidas Disputadas"
 			      },
@@ -17763,9 +18329,9 @@ cultureInfo pt-BR
 			            "Entity": "partidas_disputada"
 			          }
 			        },
-			        "ações_defensiva.n_vitórias": {
+			        "medida.n_vitórias": {
 			          "Target": {
-			            "Entity": "ações_defensiva.n_vitórias"
+			            "Entity": "medida.n_vitórias"
 			          }
 			        }
 			      },
@@ -17776,7 +18342,7 @@ cultureInfo pt-BR
 			              "Role": "partidas_disputada"
 			            },
 			            "Object": {
-			              "Role": "ações_defensiva.n_vitórias"
+			              "Role": "medida.n_vitórias"
 			            }
 			          },
 			          "State": "Generated",
@@ -17785,20 +18351,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "partidas_disputada_has_ações_defensiva_gols_sofridos_visual_balanço": {
+			    "gols_sofridos_detalhado_has_medida_gols_sofridos_visual_balanço": {
 			      "Binding": {
-			        "ConceptualEntity": "Partidas Disputadas"
+			        "ConceptualEntity": "Gols Sofridos Detalhado"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "partidas_disputada": {
+			        "gols_sofridos_detalhado": {
 			          "Target": {
-			            "Entity": "partidas_disputada"
+			            "Entity": "gols_sofridos_detalhado"
 			          }
 			        },
-			        "ações_defensiva.gols_sofridos_visual_balanço": {
+			        "medida.gols_sofridos_visual_balanço": {
 			          "Target": {
-			            "Entity": "ações_defensiva.gols_sofridos_visual_balanço"
+			            "Entity": "medida.gols_sofridos_visual_balanço"
 			          }
 			        }
 			      },
@@ -17806,32 +18372,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "partidas_disputada"
+			              "Role": "gols_sofridos_detalhado"
 			            },
 			            "Object": {
-			              "Role": "ações_defensiva.gols_sofridos_visual_balanço"
+			              "Role": "medida.gols_sofridos_visual_balanço"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "partidas_disputadas_have_gols_sofridos_visual_balanço"
+			          "ID": "gols_sofridos_detalhados_have_gols_sofridos_visual_balanço"
 			        }
 			      ]
 			    },
-			    "partidas_disputada_has_ações_defensiva_gols_feitos_visual_balanço": {
+			    "gols_marcados_detalhado_has_medida_gols_feitos_visual_balanço": {
 			      "Binding": {
-			        "ConceptualEntity": "Partidas Disputadas"
+			        "ConceptualEntity": "Gols Marcados Detalhado"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "partidas_disputada": {
+			        "gols_marcados_detalhado": {
 			          "Target": {
-			            "Entity": "partidas_disputada"
+			            "Entity": "gols_marcados_detalhado"
 			          }
 			        },
-			        "ações_defensiva.gols_feitos_visual_balanço": {
+			        "medida.gols_feitos_visual_balanço": {
 			          "Target": {
-			            "Entity": "ações_defensiva.gols_feitos_visual_balanço"
+			            "Entity": "medida.gols_feitos_visual_balanço"
 			          }
 			        }
 			      },
@@ -17839,15 +18405,15 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "partidas_disputada"
+			              "Role": "gols_marcados_detalhado"
 			            },
 			            "Object": {
-			              "Role": "ações_defensiva.gols_feitos_visual_balanço"
+			              "Role": "medida.gols_feitos_visual_balanço"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "partidas_disputadas_have_gols_feitos_visual_balanço"
+			          "ID": "gols_marcados_detalhados_have_gols_feitos_visual_balanço"
 			        }
 			      ]
 			    },
@@ -18803,6 +19369,138 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "data_bases_are_accessed_on_date_accessed"
+			        }
+			      ]
+			    },
+			    "partidas_disputada_data_hierarquia_de_data_has_partidas_disputada_data_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "Partidas Disputadas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "partidas_disputada.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "partidas_disputada.data.hierarquia_de_data"
+			          }
+			        },
+			        "partidas_disputada.data.mê": {
+			          "Target": {
+			            "Entity": "partidas_disputada.data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partidas_disputada.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "partidas_disputada.data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê5"
+			        }
+			      ]
+			    },
+			    "partidas_disputada_data_hierarquia_de_data_has_partidas_disputada_data_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "Partidas Disputadas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "partidas_disputada.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "partidas_disputada.data.hierarquia_de_data"
+			          }
+			        },
+			        "partidas_disputada.data.dia": {
+			          "Target": {
+			            "Entity": "partidas_disputada.data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partidas_disputada.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "partidas_disputada.data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias5"
+			        }
+			      ]
+			    },
+			    "partidas_disputada_data_ano_has_partidas_disputada_data_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Partidas Disputadas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "partidas_disputada.data.ano": {
+			          "Target": {
+			            "Entity": "partidas_disputada.data.ano"
+			          }
+			        },
+			        "partidas_disputada.data.trimestre": {
+			          "Target": {
+			            "Entity": "partidas_disputada.data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partidas_disputada.data.ano"
+			            },
+			            "Object": {
+			              "Role": "partidas_disputada.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres5"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partidas_disputada.data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "partidas_disputada.data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos5"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "partidas_disputada.data.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "partidas_disputada.data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos5"
 			        }
 			      ]
 			    },

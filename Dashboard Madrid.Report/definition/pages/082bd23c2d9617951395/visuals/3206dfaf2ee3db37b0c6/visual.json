@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "3206dfaf2ee3db37b0c6",
   "position": {
     "x": 896,
     "y": 343,
-    "z": 2002,
+    "z": 4000,
     "height": 377.10037174721191,
     "width": 384.23791821561338,
-    "tabOrder": 2002
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Ações Defensivas"
+                      "Entity": "Medidas"
                     }
                   },
                   "Property": "Img Jogador"

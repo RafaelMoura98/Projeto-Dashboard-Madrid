@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "125ce9833f5d8cb78fb8",
   "position": {
-    "x": 627.90551181102364,
-    "y": 374.92913385826773,
+    "x": 676.44444444444446,
+    "y": 385.77777777777777,
     "z": 0,
-    "height": 345.70078740157481,
-    "width": 632.94488188976379,
-    "tabOrder": 8000
+    "height": 305.77777777777777,
+    "width": 584,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -27,9 +27,9 @@
                 }
               },
               "queryRef": "Base Times.Imagem",
-              "nativeQueryRef": "    ",
+              "nativeQueryRef": " ",
               "active": true,
-              "displayName": "    "
+              "displayName": " "
             }
           ]
         },
@@ -40,7 +40,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Ações Defensivas"
+                      "Entity": "Medidas"
                     }
                   },
                   "Property": "Gols Sofridos Visual Balanço"
@@ -95,7 +95,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Ações Defensivas"
+                      "Entity": "Medidas"
                     }
                   },
                   "Property": "Gols Feitos Visual Balanço"
@@ -120,7 +120,7 @@
                         "Entity": "Partidas Disputadas"
                       }
                     },
-                    "Property": "Gols Feitos"
+                    "Property": "Gols Sofridos"
                   }
                 },
                 "Function": 0
@@ -220,7 +220,7 @@
             "autoSizeColumnWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -248,7 +248,18 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "11D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
                 }
               }
             }
@@ -289,7 +300,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "102.17526269713017D"
+                  "Value": "75D"
                 }
               }
             }
@@ -369,6 +380,28 @@
               "expr": {
                 "Literal": {
                   "Value": "'Verdana'"
+                }
+              }
+            },
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
                 }
               }
             }
@@ -664,7 +697,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -672,6 +705,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'Canvas'"
+                }
+              }
+            },
+            "showActionsInTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'a7bc11cf66370c49e05e'"
                 }
               }
             }
@@ -708,6 +755,17 @@
                   "Value": "12D"
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -733,6 +791,19 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
                 }
               }
             }

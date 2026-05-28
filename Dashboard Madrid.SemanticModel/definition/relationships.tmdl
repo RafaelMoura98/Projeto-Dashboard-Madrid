@@ -18,11 +18,6 @@ relationship c58b6481-3c42-4d58-b478-2aa2e1435f00
 	fromColumn: 'Gols Sofridos Detalhado'.Data
 	toColumn: LocalDateTable_04a4ef31-b6eb-43a5-a98f-75c8beb81b8e.Date
 
-relationship 93a774e0-c3b9-4e49-8e2d-76706060ec76
-	joinOnDateBehavior: datePartOnly
-	fromColumn: 'Gols Marcados Detalhado'.Data
-	toColumn: LocalDateTable_d7fc6681-944e-4536-805f-36c2993573ae.Date
-
 relationship AutoDetected_95eafd64-cd5f-427a-a088-f17b5dd0c81c
 	fromColumn: 'Ações Defensivas'.Jogadores
 	toColumn: 'Base Jogadores'.Jogadores
@@ -44,10 +39,6 @@ relationship a6aadbc3-27b5-ccec-a274-11fe1ff15dca
 	fromColumn: 'Partidas Disputadas'.Oponente
 	toColumn: 'Base Times'.Times
 
-relationship 71231494-abca-0a8c-17fe-bfc4fc7c5c64
-	fromColumn: 'Gols Sofridos Detalhado'.Adversário
-	toColumn: 'Base Times'.Times
-
 relationship 5487c28c-00f9-e7b5-990d-ac7573a7a912
 	fromColumn: 'Passes Detalhados'.Jogador
 	toColumn: 'Base Jogadores'.Jogadores
@@ -67,10 +58,6 @@ relationship c828e4bd-9d70-96ef-338a-15cf921a472b
 relationship aad27931-5b0d-4067-64d1-ed205a26f3e2
 	fromColumn: Passes.Jogador
 	toColumn: 'Base Jogadores'.Jogadores
-
-relationship 3f69076a-77b0-7013-9eb0-81e65fc991f5
-	fromColumn: 'Gols Marcados Detalhado'.Adversário
-	toColumn: 'Base Times'.Times
 
 relationship cafdbea4-6003-6df6-dae5-d41d605ba886
 	fromColumn: Chutes.Jogador
@@ -123,4 +110,28 @@ relationship 18d1b990-cedb-a77a-9b30-3a60e0755ce6
 relationship 47281bbe-3474-af27-31e9-b7a89d6c08c9
 	fromColumn: 'Ações Defensivas'.Temporada
 	toColumn: Temporadas.Temporadas
+
+relationship 18662033-2b65-8742-7a0c-8158d80c0e45
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'Passes Detalhados'.Jogador
+	toColumn: Passes.Jogador
+
+relationship 1fae49f8-7b0b-b537-1df5-bcc68ad735a7
+	fromColumn: 'Gols Marcados Detalhado'.Marcador
+	toColumn: 'Base Jogadores'.Jogadores
+
+relationship 33e1056d-c3da-4000-8379-9a01bbdc0203
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Gols Marcados Detalhado'.Data
+	toColumn: LocalDateTable_19379be2-5052-441c-b5e0-8ce847253c5a.Date
+
+relationship 85d155eb-bfd5-0d84-dd3b-9242629de29e
+	fromColumn: 'Gols Marcados Detalhado'.ID_Partida
+	toColumn: 'Partidas Disputadas'.ID_Partida
+
+relationship 53ec2a63-1719-2cb4-efc3-3055f5e64815
+	fromColumn: 'Gols Sofridos Detalhado'.ID_Partida
+	toColumn: 'Partidas Disputadas'.ID_Partida
 

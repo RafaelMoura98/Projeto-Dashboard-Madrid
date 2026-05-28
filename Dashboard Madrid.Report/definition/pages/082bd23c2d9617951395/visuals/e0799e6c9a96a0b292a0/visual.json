@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "e0799e6c9a96a0b292a0",
+  "position": {
+    "x": 100,
+    "y": 100,
+    "z": 8000,
+    "height": 300,
+    "width": 300,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "synopticPanelByOKVIZC365478550CD4DC0A2ED985DC3E23EED",
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -166,6 +166,22 @@ table 'Partidas Disputadas'
 
 		annotation SummarizationSetBy = Automatic
 
+	column Índice
+		dataType: string
+		lineageTag: 186f9a05-6e28-4481-8c7f-271a20c88cbe
+		summarizeBy: none
+		sourceColumn: Índice
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Partida
+		dataType: string
+		lineageTag: 1f677a9e-9e8e-4002-9df3-007a1f67fc8f
+		summarizeBy: none
+		sourceColumn: ID_Partida
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Partidas Disputadas' = m
 		mode: import
 		source =
@@ -174,9 +190,12 @@ table 'Partidas Disputadas'
 				    #"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Partidas Disputadas pelo Clube csv" = Fonte{[#"Folder Path"="C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\",Name="Jogadores Madrid - Partidas Disputadas pelo Clube.csv"]}[Content],
 				    #"CSV Importado" = Csv.Document(#"C:\Users\PPP Almoxarifado\Desktop\Projeto Dashboard Madrid\DataBase\_Jogadores Madrid - Partidas Disputadas pelo Clube csv",[Delimiter=",", Columns=19, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CSV Importado", [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Gols Feitos", Int64.Type}, {"Gols Sofridos", Int64.Type}, {"Data", type date}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Gols Feitos", Int64.Type}, {"Gols Sofridos", Int64.Type}, {"Data", type date}}),
+				    #"Índice Adicionado" = Table.AddIndexColumn(#"Tipo Alterado", "Índice", 1, 0, Int64.Type),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Índice Adicionado",{{"Índice", type text}}),
+				    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Tipo Alterado1", "ID_Partida", each Text.Combine({Text.From([Data], "pt-BR"), [Partida], [Competição]}, " | "), type text)
 				in
-				    #"Tipo Alterado"
+				    #"Coluna Mesclada Inserida"
 
 	annotation PBI_NavigationStepName = Navegação
 
